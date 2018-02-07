@@ -3,20 +3,18 @@ namespace Zebble.Plugin.Renderer
     using System;
     using System.ComponentModel;
     using Zebble;
-    using Windows.UI;
     using System.Threading.Tasks;
-    using Windows.UI.Xaml;
-    using TheNativeType = System.Object; //TODO: replace with the native UWP type;
+    using TheNativeType = System.Object; //TODO: replace with the native iOS type;
 
     [EditorBrowsable(EditorBrowsableState.Never)]
-    public class ChartRenderer : ICustomRenderer
+    public class zebbleOxyPlotRenderer : ICustomRenderer
     {
-        Chart View;
+        zebbleOxyPlot View;
         TheNativeType Result;
 
-        public async Task<FrameworkElement> Render(object view)
+        public async Task<UIKit.UIView> Render(object view)
         {
-            View = (Chart)view;
+            View = (zebbleOxyPlot)view;
             Result = new TheNativeType();
 
             // TODO: Map the methods to the native component:

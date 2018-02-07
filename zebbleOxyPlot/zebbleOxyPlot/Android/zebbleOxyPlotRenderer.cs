@@ -4,25 +4,27 @@ namespace Zebble
     using System.ComponentModel;
     using Zebble;
     using System.Threading.Tasks;
+    using AndroidOS;
+    using Android.Views;
     using OxyPlot;
     using OxyPlot.Axes;
     using OxyPlot.Series;
     using OxyPlot.Xamarin.Android;
+    using Android;
 
     [EditorBrowsable(EditorBrowsableState.Never)]
-    public class ChartRenderer : INativeRenderer
+    public class zebbleOxyPlotRenderer : INativeRenderer
     {
-        Chart View;
+        zebbleOxyPlot View;
         ChartLayout Container;
         static int NextId;
-
         public async Task<Android.Views.View> Render(Renderer renderer)
         {
             try
             {
 
 
-                View = (Chart)renderer.View;
+                View = (zebbleOxyPlot)renderer.View;
 
                 Container = new ChartLayout(Renderer.Context);
                 Container.Id = FindFreeId();
@@ -81,6 +83,7 @@ namespace Zebble
 
             return plotModel;
         }
+
         public void Dispose()
         {
             throw new NotImplementedException();

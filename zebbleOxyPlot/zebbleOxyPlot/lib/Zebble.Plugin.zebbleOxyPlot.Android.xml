@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>Zebble.Plugin.Chart.Android</name>
+        <name>Zebble.Plugin.zebbleOxyPlot.Android</name>
     </assembly>
     <members>
     </members>

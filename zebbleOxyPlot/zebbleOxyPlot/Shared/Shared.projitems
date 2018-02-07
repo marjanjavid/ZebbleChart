@@ -6,13 +6,13 @@
     <SharedGUID>f413d304-3b87-4db8-90d1-84694155eca5</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>Zebble.Plugin</Import_RootNamespace>
+    <Import_RootNamespace>Zebble</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Chart.cs" />    
+    <Compile Include="$(MSBuildThisFileDirectory)zebbleOxyPlot.cs" />
     <None Include="$(MSBuildThisFileDirectory)Icon.png" />
     <None Include="$(MSBuildThisFileDirectory)MOVE-CONTENT-TO-ROOT\.gitignore" />
     <None Include="$(MSBuildThisFileDirectory)NuGet\NuGet.nuspec" />
     <None Include="$(MSBuildThisFileDirectory)NuGet\CreatePackage.bat" />
-  </ItemGroup>  
+  </ItemGroup>
 </Project>
