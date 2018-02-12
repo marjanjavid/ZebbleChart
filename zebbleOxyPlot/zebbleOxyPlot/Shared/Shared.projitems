@@ -9,10 +9,87 @@
     <Import_RootNamespace>Zebble</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Annotations\AnnotationLayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Axes\Axis.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Axes\AxisChangedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Axes\AxisChangeTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Axes\AxisLayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Axes\AxisPosition.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Axes\AxisUtilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Axes\DateTimeAxis.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Axes\DateTimeIntervalType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Axes\LinearAxis.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Axes\Rendering\AxisRendererBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Axes\Rendering\HorizontalAndVerticalAxisRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Axes\TickStyle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Axes\TimeSpanAxis.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Foundation\CodeGenerator\CodeGenerationAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Foundation\CodeGenerator\CodeGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Foundation\CodeGenerator\CodeGeneratorStringExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Foundation\CodeGenerator\ICodeGenerating.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Foundation\DataPoint.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Foundation\MarkerType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\Element.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\ElementCollectionChangedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\ElementCollection{T}.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\HitTestArguments.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\HitTestResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\Model.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\SelectableElement.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\Selection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\SelectionMode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\UIElement.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Imaging\Bmp\BmpDecoder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Imaging\Bmp\BmpEncoder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Imaging\Bmp\BmpEncoderOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Imaging\IImageDecoder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Imaging\IImageEncoder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Imaging\ImageEncoderOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Imaging\ImageFormat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Imaging\OxyImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Imaging\OxyImageInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Imaging\Png\PngDecoder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Imaging\Png\PngEncoder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Imaging\Png\PngEncoderOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Input\OxyKey.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Input\OxyModifierKeys.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Input\OxyMouseButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlotController\EventArgs\OxyInputEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlotController\EventArgs\OxyKeyEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlotController\EventArgs\OxyMouseDownEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlotController\EventArgs\OxyMouseEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlotController\EventArgs\OxyTouchEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlotModel\PlotElement.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlotModel\PlotModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\FontWeights.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\LineJoin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\LineStyle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\LineStyleHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\OxyColor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\OxyColorExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\OxyColors.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\OxyPen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\OxyRect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\OxySize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\OxySizeExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\OxyThickness.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\RenderContext\IRenderContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\RenderContext\MathRenderingExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\RenderContext\RenderingExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\ScreenPoint.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\ScreenVector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\Utilities\CohenSutherlandClipping.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\Utilities\SutherlandHodgmanClipping.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\BinaryReaderExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\FractionHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\HashCodeBuilder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)zebbleOxyPlot.cs" />
     <None Include="$(MSBuildThisFileDirectory)Icon.png" />
     <None Include="$(MSBuildThisFileDirectory)MOVE-CONTENT-TO-ROOT\.gitignore" />
     <None Include="$(MSBuildThisFileDirectory)NuGet\NuGet.nuspec" />
     <None Include="$(MSBuildThisFileDirectory)NuGet\CreatePackage.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)PlotView\" />
   </ItemGroup>
 </Project>

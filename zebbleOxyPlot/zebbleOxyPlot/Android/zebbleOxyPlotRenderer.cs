@@ -25,7 +25,6 @@ namespace Zebble
 
 
                 View = (zebbleOxyPlot)renderer.View;
-
                 Container = new ChartLayout(Renderer.Context);
                 Container.Id = FindFreeId();
                 await View.WhenShown(() => { Thread.UI.Run(LoadChart); });
@@ -45,6 +44,10 @@ namespace Zebble
         }
         async Task LoadChart()
         {
+            try
+            {
+
+           
             //We should wait until the view id is added to resources dynamically
             while (UIRuntime.CurrentActivity.FindViewById(Container.Id) == null) await Task.Delay(Animation.OneFrame);
 
@@ -56,10 +59,16 @@ namespace Zebble
             Container.AddView(view);
 
             await Task.CompletedTask;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
         private PlotModel CreatePlotModel()
         {
-            var plotModel = new PlotModel { Title = View.Title };
+            var plotModel = new PlotModel { Title = View.plotModel.Title };
 
             plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom });
             plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Maximum = 10, Minimum = 0 });

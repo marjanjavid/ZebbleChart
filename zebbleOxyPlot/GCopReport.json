@@ -51,7 +51,42 @@
     },
     {
       "Analyzer": "ConstantVariableAnalyzer",
+      "OccurrenceCount": 11,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-7OHVFTD"
+    },
+    {
+      "Analyzer": "RemoveUnnecessaryBracesAnalyzer",
+      "OccurrenceCount": 8,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-7OHVFTD"
+    },
+    {
+      "Analyzer": "RedundantCastAnalyzer",
+      "OccurrenceCount": 1,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-7OHVFTD"
+    },
+    {
+      "Analyzer": "MethodComplexityAnalyzer",
+      "OccurrenceCount": 1,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-7OHVFTD"
+    },
+    {
+      "Analyzer": "OrderByWhereLinqAnalyzer",
       "OccurrenceCount": 3,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "DESKTOP-7OHVFTD"
+    },
+    {
+      "Analyzer": "BooleanParameterAnalyzer",
+      "OccurrenceCount": 1,
       "Exceptions": null,
       "SentToServer": true,
       "InstallationName": "DESKTOP-7OHVFTD"
