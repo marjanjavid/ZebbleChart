@@ -4,479 +4,25 @@
         <name>Zebble.Plugin.zebbleOxyPlot.Android</name>
     </assembly>
     <members>
-        <member name="T:Zebble.zebbleOxyPlot.PlotModel">
+        <member name="T:Zebble.AnnotationLayer">
             <summary>
-            Represents a plot.
+            Specifies the layer for an <see cref="!:Annotation" />.
             </summary>
         </member>
-        <member name="F:Zebble.zebbleOxyPlot.PlotModel.plotViewReference">
+        <member name="F:Zebble.AnnotationLayer.BelowAxes">
             <summary>
-            The plot view that renders this plot.
+            Render the annotation below the gridlines of the axes.
             </summary>
         </member>
-        <member name="F:Zebble.zebbleOxyPlot.PlotModel.currentColorIndex">
+        <member name="F:Zebble.AnnotationLayer.BelowSeries">
             <summary>
-            The current color index.
+            Render the annotation below the series.
             </summary>
         </member>
-        <member name="F:Zebble.zebbleOxyPlot.PlotModel.isDataUpdated">
+        <member name="F:Zebble.AnnotationLayer.AboveSeries">
             <summary>
-            Flags if the data has been updated.
+            Render the annotation above the series.
             </summary>
-        </member>
-        <member name="F:Zebble.zebbleOxyPlot.PlotModel.lastPlotException">
-            <summary>
-            The last update exception.
-            </summary>
-            <value>The exception or <c>null</c> if there was no exceptions during the last update.</value>
-        </member>
-        <member name="M:Zebble.zebbleOxyPlot.PlotModel.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Zebble.zebbleOxyPlot.PlotModel" /> class.
-            </summary>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.DefaultFont">
-            <summary>
-            Gets or sets the default font.
-            </summary>
-            <value>The default font.</value>
-            <remarks>This font is used for text on axes, series, legends and plot titles unless other fonts are specified.</remarks>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.DefaultFontSize">
-            <summary>
-            Gets or sets the default size of the fonts.
-            </summary>
-            <value>The default size of the font.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.ActualCulture">
-            <summary>
-            Gets the actual culture.
-            </summary>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.Axes">
-            <summary>
-            Gets the axes.
-            </summary>
-            <value>The axes.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.Background">
-            <summary>
-            Gets or sets the color of the background of the plot.
-            </summary>
-            <value>The color. The default is <see cref="F:Zebble.zebbleOxyPlot.OxyColors.Undefined" />.</value>
-            <remarks>If the background color is set to <see cref="F:Zebble.zebbleOxyPlot.OxyColors.Undefined" />, the default color of the plot view will be used.</remarks>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.Culture">
-            <summary>
-            Gets or sets the culture.
-            </summary>
-            <value>The culture.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.DefaultColors">
-            <summary>
-            Gets or sets the default colors.
-            </summary>
-            <value>The default colors.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.IsLegendVisible">
-            <summary>
-            Gets or sets a value indicating whether the legend is visible. The titles of the series must be set to use the legend.
-            </summary>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendBackground">
-            <summary>
-            Gets or sets the background color of the legend. Use <c>null</c> for no background.
-            </summary>
-            <value>The legend background.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendBorder">
-            <summary>
-            Gets or sets the border color of the legend.
-            </summary>
-            <value>The legend border.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendBorderThickness">
-            <summary>
-            Gets or sets the thickness of the legend border. Use 0 for no border.
-            </summary>
-            <value>The legend border thickness.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendColumnSpacing">
-            <summary>
-            Gets or sets the spacing between columns of legend items (only for vertical orientation).
-            </summary>
-            <value>The spacing in device independent units.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendFont">
-            <summary>
-            Gets or sets the legend font.
-            </summary>
-            <value>The legend font.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendFontSize">
-            <summary>
-            Gets or sets the size of the legend font.
-            </summary>
-            <value>The size of the legend font.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendTextColor">
-            <summary>
-            Gets or sets the color of the legend text.
-            </summary>
-            <value>The color of the legend text.</value>
-            <remarks>If this value is <c>null</c>, the TextColor will be used.</remarks>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendFontWeight">
-            <summary>
-            Gets or sets the legend font weight.
-            </summary>
-            <value>The legend font weight.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendItemAlignment">
-            <summary>
-            Gets or sets the legend item alignment.
-            </summary>
-            <value>The legend item alignment.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendItemOrder">
-            <summary>
-            Gets or sets the legend item order.
-            </summary>
-            <value>The legend item order.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendItemSpacing">
-            <summary>
-            Gets or sets the horizontal spacing between legend items when the orientation is horizontal.
-            </summary>
-            <value>The horizontal distance between items in device independent units.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendLineSpacing">
-            <summary>
-            Gets or sets the vertical spacing between legend items.
-            </summary>
-            <value>The spacing in device independent units.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendMargin">
-            <summary>
-            Gets or sets the legend margin.
-            </summary>
-            <value>The legend margin.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendMaxWidth">
-            <summary>
-            Gets or sets the max width of the legend.
-            </summary>
-            <value>The max width of the legend.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendMaxHeight">
-            <summary>
-            Gets or sets the max height of the legend.
-            </summary>
-            <value>The max height of the legend.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendOrientation">
-            <summary>
-            Gets or sets the legend orientation.
-            </summary>
-            <value>The legend orientation.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendPadding">
-            <summary>
-            Gets or sets the legend padding.
-            </summary>
-            <value>The legend padding.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendPlacement">
-            <summary>
-            Gets or sets the legend placement.
-            </summary>
-            <value>The legend placement.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendPosition">
-            <summary>
-            Gets or sets the legend position.
-            </summary>
-            <value>The legend position.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendSymbolLength">
-            <summary>
-            Gets or sets the length of the legend symbols (the default value is 16).
-            </summary>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendSymbolMargin">
-            <summary>
-            Gets or sets the legend symbol margins (distance between the symbol and the text).
-            </summary>
-            <value>The legend symbol margin.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendSymbolPlacement">
-            <summary>
-            Gets or sets the legend symbol placement.
-            </summary>
-            <value>The legend symbol placement.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendTitle">
-            <summary>
-            Gets or sets the legend title.
-            </summary>
-            <value>The legend title.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendTitleColor">
-            <summary>
-            Gets or sets the color of the legend title.
-            </summary>
-            <value>The color of the legend title.</value>
-            <remarks>If this value is <c>null</c>, the TextColor will be used.</remarks>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendTitleFont">
-            <summary>
-            Gets or sets the legend title font.
-            </summary>
-            <value>The legend title font.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendTitleFontSize">
-            <summary>
-            Gets or sets the size of the legend title font.
-            </summary>
-            <value>The size of the legend title font.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendTitleFontWeight">
-            <summary>
-            Gets or sets the legend title font weight.
-            </summary>
-            <value>The legend title font weight.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.Padding">
-            <summary>
-            Gets or sets the padding around the plot.
-            </summary>
-            <value>The padding.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.Width">
-            <summary>
-            Gets the total width of the plot (in device units).
-            </summary>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.Height">
-            <summary>
-            Gets the total height of the plot (in device units).
-            </summary>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.PlotAndAxisArea">
-            <summary>
-            Gets the area including both the plot and the axes. Outside legends are rendered outside this rectangle.
-            </summary>
-            <value>The plot and axis area.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.PlotArea">
-            <summary>
-            Gets the plot area. This area is used to draw the series (not including axes or legends).
-            </summary>
-            <value>The plot area.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.AxisTierDistance">
-            <summary>
-            Gets or sets the distance between two neighborhood tiers of the same AxisPosition.
-            </summary>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.PlotAreaBackground">
-            <summary>
-            Gets or sets the color of the background of the plot area.
-            </summary>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.PlotAreaBorderColor">
-            <summary>
-            Gets or sets the color of the border around the plot area.
-            </summary>
-            <value>The color of the box.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.PlotAreaBorderThickness">
-            <summary>
-            Gets or sets the thickness of the border around the plot area.
-            </summary>
-            <value>The box thickness.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.PlotMargins">
-            <summary>
-            Gets or sets the margins around the plot (this should be large enough to fit the axes).
-            If any of the values is set to <c>double.NaN</c>, the margin is adjusted to the value required by the axes.
-            </summary>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.PlotType">
-            <summary>
-            Gets or sets the type of the coordinate system.
-            </summary>
-            <value>The type of the plot.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.RenderingDecorator">
-            <summary>
-            Gets or sets the rendering decorator.
-            </summary>
-            <value>
-            The rendering decorator.
-            </value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.Subtitle">
-            <summary>
-            Gets or sets the subtitle.
-            </summary>
-            <value>The subtitle.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.SubtitleFont">
-            <summary>
-            Gets or sets the subtitle font. If this property is <c>null</c>, the Title font will be used.
-            </summary>
-            <value>The subtitle font.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.SubtitleFontSize">
-            <summary>
-            Gets or sets the size of the subtitle font.
-            </summary>
-            <value>The size of the subtitle font.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.SubtitleFontWeight">
-            <summary>
-            Gets or sets the subtitle font weight.
-            </summary>
-            <value>The subtitle font weight.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.TextColor">
-            <summary>
-            Gets or sets the default color of the text in the plot (titles, legends, annotations, axes).
-            </summary>
-            <value>The color of the text.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.Title">
-            <summary>
-            Gets or sets the title.
-            </summary>
-            <value>The title.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.TitleToolTip">
-            <summary>
-            Gets or sets the title tool tip.
-            </summary>
-            <value>The title tool tip.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.TitleColor">
-            <summary>
-            Gets or sets the color of the title.
-            </summary>
-            <value>The color of the title.</value>
-            <remarks>If the value is <c>null</c>, the TextColor will be used.</remarks>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.SubtitleColor">
-            <summary>
-            Gets or sets the color of the subtitle.
-            </summary>
-            <value>The color of the subtitle.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.TitleHorizontalAlignment">
-            <summary>
-            Gets or sets the horizontal alignment of the title and subtitle.
-            </summary>
-            <value>
-            The alignment.
-            </value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.TitleFont">
-            <summary>
-            Gets or sets the title font.
-            </summary>
-            <value>The title font.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.TitleFontSize">
-            <summary>
-            Gets or sets the size of the title font.
-            </summary>
-            <value>The size of the title font.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.TitleFontWeight">
-            <summary>
-            Gets or sets the title font weight.
-            </summary>
-            <value>The title font weight.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.TitlePadding">
-            <summary>
-            Gets or sets the padding around the title.
-            </summary>
-            <value>The title padding.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.DefaultXAxis">
-            <summary>
-            Gets the default X axis.
-            </summary>
-            <value>The default X axis.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.DefaultYAxis">
-            <summary>
-            Gets the default Y axis.
-            </summary>
-            <value>The default Y axis.</value>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.ActualTitleFont">
-            <summary>
-            Gets the actual title font.
-            </summary>
-        </member>
-        <member name="P:Zebble.zebbleOxyPlot.PlotModel.ActualSubtitleFont">
-            <summary>
-            Gets the actual subtitle font.
-            </summary>
-        </member>
-        <member name="M:Zebble.zebbleOxyPlot.PlotModel.GetDefaultColor">
-            <summary>
-            Gets the default color from the DefaultColors palette.
-            </summary>
-            <returns>The next default color.</returns>
-        </member>
-        <member name="M:Zebble.zebbleOxyPlot.PlotModel.ToString">
-            <summary>
-            Returns a <see cref="T:System.String" /> that represents this instance.
-            </summary>
-            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
-        </member>
-        <member name="M:Zebble.zebbleOxyPlot.PlotModel.GetLastPlotException">
-            <summary>
-            Gets any exception thrown during the last <see cref="!:IPlotModel.Update" /> call.
-            </summary>
-            <returns>The exception or <c>null</c> if there was no exception.</returns>
-        </member>
-        <member name="M:Zebble.zebbleOxyPlot.PlotModel.GetAxisOrDefault(System.String,Zebble.zebbleOxyPlot.Axis)">
-            <summary>
-            Gets the axis for the specified key.
-            </summary>
-            <param name="key">The axis key.</param>
-            <param name="defaultAxis">The default axis.</param>
-            <returns>The axis, or the defaultAxis if the key is not specified.</returns>
-            <exception cref="T:System.InvalidOperationException">Cannot find axis with the specified key.</exception>
-        </member>
-        <member name="M:Zebble.zebbleOxyPlot.PlotModel.ResetAllAxes">
-            <summary>
-            Resets all axes in the model.
-            </summary>
-        </member>
-        <member name="M:Zebble.zebbleOxyPlot.PlotModel.PanAllAxes(System.Double,System.Double)">
-            <summary>
-            Pans all axes.
-            </summary>
-            <param name="dx">The horizontal distance to pan (screen coordinates).</param>
-            <param name="dy">The vertical distance to pan (screen coordinates).</param>
-        </member>
-        <member name="M:Zebble.zebbleOxyPlot.PlotModel.ZoomAllAxes(System.Double)">
-            <summary>
-            Zooms all axes.
-            </summary>
-            <param name="factor">The zoom factor.</param>
-        </member>
-        <member name="M:Zebble.zebbleOxyPlot.PlotModel.GetHitTestElements">
-            <summary>
-            Gets all elements of the model, top-level elements first.
-            </summary>
-            <returns>
-            An enumerator of the elements.
-            </returns>
         </member>
         <member name="T:Zebble.zebbleOxyPlot.Axis">
             <summary>
@@ -4127,6 +3673,487 @@
             <returns>A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.</returns>
             <remarks>This method creates the hash code by reflecting the value of all public properties.</remarks>
         </member>
+        <member name="T:Zebble.zebbleOxyPlot.PlotModel">
+            <summary>
+            Represents a plot.
+            </summary>
+        </member>
+        <member name="F:Zebble.zebbleOxyPlot.PlotModel.plotViewReference">
+            <summary>
+            The plot view that renders this plot.
+            </summary>
+        </member>
+        <member name="F:Zebble.zebbleOxyPlot.PlotModel.currentColorIndex">
+            <summary>
+            The current color index.
+            </summary>
+        </member>
+        <member name="F:Zebble.zebbleOxyPlot.PlotModel.isDataUpdated">
+            <summary>
+            Flags if the data has been updated.
+            </summary>
+        </member>
+        <member name="F:Zebble.zebbleOxyPlot.PlotModel.lastPlotException">
+            <summary>
+            The last update exception.
+            </summary>
+            <value>The exception or <c>null</c> if there was no exceptions during the last update.</value>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.PlotModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zebble.zebbleOxyPlot.PlotModel" /> class.
+            </summary>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.DefaultFont">
+            <summary>
+            Gets or sets the default font.
+            </summary>
+            <value>The default font.</value>
+            <remarks>This font is used for text on axes, series, legends and plot titles unless other fonts are specified.</remarks>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.DefaultFontSize">
+            <summary>
+            Gets or sets the default size of the fonts.
+            </summary>
+            <value>The default size of the font.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.ActualCulture">
+            <summary>
+            Gets the actual culture.
+            </summary>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.PlotView">
+            <summary>
+            Gets the plot view that renders this plot.
+            </summary>
+            <value>The plot view.</value>
+            <remarks>Only one view can render the plot at the same time.</remarks>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.Axes">
+            <summary>
+            Gets the axes.
+            </summary>
+            <value>The axes.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.Background">
+            <summary>
+            Gets or sets the color of the background of the plot.
+            </summary>
+            <value>The color. The default is <see cref="F:Zebble.zebbleOxyPlot.OxyColors.Undefined" />.</value>
+            <remarks>If the background color is set to <see cref="F:Zebble.zebbleOxyPlot.OxyColors.Undefined" />, the default color of the plot view will be used.</remarks>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.Culture">
+            <summary>
+            Gets or sets the culture.
+            </summary>
+            <value>The culture.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.DefaultColors">
+            <summary>
+            Gets or sets the default colors.
+            </summary>
+            <value>The default colors.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.IsLegendVisible">
+            <summary>
+            Gets or sets a value indicating whether the legend is visible. The titles of the series must be set to use the legend.
+            </summary>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendBackground">
+            <summary>
+            Gets or sets the background color of the legend. Use <c>null</c> for no background.
+            </summary>
+            <value>The legend background.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendBorder">
+            <summary>
+            Gets or sets the border color of the legend.
+            </summary>
+            <value>The legend border.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendBorderThickness">
+            <summary>
+            Gets or sets the thickness of the legend border. Use 0 for no border.
+            </summary>
+            <value>The legend border thickness.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendColumnSpacing">
+            <summary>
+            Gets or sets the spacing between columns of legend items (only for vertical orientation).
+            </summary>
+            <value>The spacing in device independent units.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendFont">
+            <summary>
+            Gets or sets the legend font.
+            </summary>
+            <value>The legend font.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendFontSize">
+            <summary>
+            Gets or sets the size of the legend font.
+            </summary>
+            <value>The size of the legend font.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendTextColor">
+            <summary>
+            Gets or sets the color of the legend text.
+            </summary>
+            <value>The color of the legend text.</value>
+            <remarks>If this value is <c>null</c>, the TextColor will be used.</remarks>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendFontWeight">
+            <summary>
+            Gets or sets the legend font weight.
+            </summary>
+            <value>The legend font weight.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendItemAlignment">
+            <summary>
+            Gets or sets the legend item alignment.
+            </summary>
+            <value>The legend item alignment.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendItemOrder">
+            <summary>
+            Gets or sets the legend item order.
+            </summary>
+            <value>The legend item order.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendItemSpacing">
+            <summary>
+            Gets or sets the horizontal spacing between legend items when the orientation is horizontal.
+            </summary>
+            <value>The horizontal distance between items in device independent units.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendLineSpacing">
+            <summary>
+            Gets or sets the vertical spacing between legend items.
+            </summary>
+            <value>The spacing in device independent units.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendMargin">
+            <summary>
+            Gets or sets the legend margin.
+            </summary>
+            <value>The legend margin.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendMaxWidth">
+            <summary>
+            Gets or sets the max width of the legend.
+            </summary>
+            <value>The max width of the legend.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendMaxHeight">
+            <summary>
+            Gets or sets the max height of the legend.
+            </summary>
+            <value>The max height of the legend.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendOrientation">
+            <summary>
+            Gets or sets the legend orientation.
+            </summary>
+            <value>The legend orientation.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendPadding">
+            <summary>
+            Gets or sets the legend padding.
+            </summary>
+            <value>The legend padding.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendPlacement">
+            <summary>
+            Gets or sets the legend placement.
+            </summary>
+            <value>The legend placement.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendPosition">
+            <summary>
+            Gets or sets the legend position.
+            </summary>
+            <value>The legend position.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendSymbolLength">
+            <summary>
+            Gets or sets the length of the legend symbols (the default value is 16).
+            </summary>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendSymbolMargin">
+            <summary>
+            Gets or sets the legend symbol margins (distance between the symbol and the text).
+            </summary>
+            <value>The legend symbol margin.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendSymbolPlacement">
+            <summary>
+            Gets or sets the legend symbol placement.
+            </summary>
+            <value>The legend symbol placement.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendTitle">
+            <summary>
+            Gets or sets the legend title.
+            </summary>
+            <value>The legend title.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendTitleColor">
+            <summary>
+            Gets or sets the color of the legend title.
+            </summary>
+            <value>The color of the legend title.</value>
+            <remarks>If this value is <c>null</c>, the TextColor will be used.</remarks>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendTitleFont">
+            <summary>
+            Gets or sets the legend title font.
+            </summary>
+            <value>The legend title font.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendTitleFontSize">
+            <summary>
+            Gets or sets the size of the legend title font.
+            </summary>
+            <value>The size of the legend title font.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.LegendTitleFontWeight">
+            <summary>
+            Gets or sets the legend title font weight.
+            </summary>
+            <value>The legend title font weight.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.Padding">
+            <summary>
+            Gets or sets the padding around the plot.
+            </summary>
+            <value>The padding.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.Width">
+            <summary>
+            Gets the total width of the plot (in device units).
+            </summary>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.Height">
+            <summary>
+            Gets the total height of the plot (in device units).
+            </summary>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.PlotAndAxisArea">
+            <summary>
+            Gets the area including both the plot and the axes. Outside legends are rendered outside this rectangle.
+            </summary>
+            <value>The plot and axis area.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.PlotArea">
+            <summary>
+            Gets the plot area. This area is used to draw the series (not including axes or legends).
+            </summary>
+            <value>The plot area.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.AxisTierDistance">
+            <summary>
+            Gets or sets the distance between two neighborhood tiers of the same AxisPosition.
+            </summary>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.PlotAreaBackground">
+            <summary>
+            Gets or sets the color of the background of the plot area.
+            </summary>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.PlotAreaBorderColor">
+            <summary>
+            Gets or sets the color of the border around the plot area.
+            </summary>
+            <value>The color of the box.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.PlotAreaBorderThickness">
+            <summary>
+            Gets or sets the thickness of the border around the plot area.
+            </summary>
+            <value>The box thickness.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.PlotMargins">
+            <summary>
+            Gets or sets the margins around the plot (this should be large enough to fit the axes).
+            If any of the values is set to <c>double.NaN</c>, the margin is adjusted to the value required by the axes.
+            </summary>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.PlotType">
+            <summary>
+            Gets or sets the type of the coordinate system.
+            </summary>
+            <value>The type of the plot.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.RenderingDecorator">
+            <summary>
+            Gets or sets the rendering decorator.
+            </summary>
+            <value>
+            The rendering decorator.
+            </value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.Subtitle">
+            <summary>
+            Gets or sets the subtitle.
+            </summary>
+            <value>The subtitle.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.SubtitleFont">
+            <summary>
+            Gets or sets the subtitle font. If this property is <c>null</c>, the Title font will be used.
+            </summary>
+            <value>The subtitle font.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.SubtitleFontSize">
+            <summary>
+            Gets or sets the size of the subtitle font.
+            </summary>
+            <value>The size of the subtitle font.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.SubtitleFontWeight">
+            <summary>
+            Gets or sets the subtitle font weight.
+            </summary>
+            <value>The subtitle font weight.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.TextColor">
+            <summary>
+            Gets or sets the default color of the text in the plot (titles, legends, annotations, axes).
+            </summary>
+            <value>The color of the text.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.TitleToolTip">
+            <summary>
+            Gets or sets the title tool tip.
+            </summary>
+            <value>The title tool tip.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.TitleColor">
+            <summary>
+            Gets or sets the color of the title.
+            </summary>
+            <value>The color of the title.</value>
+            <remarks>If the value is <c>null</c>, the TextColor will be used.</remarks>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.SubtitleColor">
+            <summary>
+            Gets or sets the color of the subtitle.
+            </summary>
+            <value>The color of the subtitle.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.TitleHorizontalAlignment">
+            <summary>
+            Gets or sets the horizontal alignment of the title and subtitle.
+            </summary>
+            <value>
+            The alignment.
+            </value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.TitleFont">
+            <summary>
+            Gets or sets the title font.
+            </summary>
+            <value>The title font.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.TitleFontSize">
+            <summary>
+            Gets or sets the size of the title font.
+            </summary>
+            <value>The size of the title font.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.TitleFontWeight">
+            <summary>
+            Gets or sets the title font weight.
+            </summary>
+            <value>The title font weight.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.TitlePadding">
+            <summary>
+            Gets or sets the padding around the title.
+            </summary>
+            <value>The title padding.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.DefaultXAxis">
+            <summary>
+            Gets the default X axis.
+            </summary>
+            <value>The default X axis.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.DefaultYAxis">
+            <summary>
+            Gets the default Y axis.
+            </summary>
+            <value>The default Y axis.</value>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.ActualTitleFont">
+            <summary>
+            Gets the actual title font.
+            </summary>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.PlotModel.ActualSubtitleFont">
+            <summary>
+            Gets the actual subtitle font.
+            </summary>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.PlotModel.GetDefaultColor">
+            <summary>
+            Gets the default color from the DefaultColors palette.
+            </summary>
+            <returns>The next default color.</returns>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.PlotModel.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.PlotModel.GetLastPlotException">
+            <summary>
+            Gets any exception thrown during the last <see cref="!:IPlotModel.Update" /> call.
+            </summary>
+            <returns>The exception or <c>null</c> if there was no exception.</returns>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.PlotModel.GetAxisOrDefault(System.String,Zebble.zebbleOxyPlot.Axis)">
+            <summary>
+            Gets the axis for the specified key.
+            </summary>
+            <param name="key">The axis key.</param>
+            <param name="defaultAxis">The default axis.</param>
+            <returns>The axis, or the defaultAxis if the key is not specified.</returns>
+            <exception cref="T:System.InvalidOperationException">Cannot find axis with the specified key.</exception>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.PlotModel.ResetAllAxes">
+            <summary>
+            Resets all axes in the model.
+            </summary>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.PlotModel.PanAllAxes(System.Double,System.Double)">
+            <summary>
+            Pans all axes.
+            </summary>
+            <param name="dx">The horizontal distance to pan (screen coordinates).</param>
+            <param name="dy">The vertical distance to pan (screen coordinates).</param>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.PlotModel.ZoomAllAxes(System.Double)">
+            <summary>
+            Zooms all axes.
+            </summary>
+            <param name="factor">The zoom factor.</param>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.PlotModel.GetHitTestElements">
+            <summary>
+            Gets all elements of the model, top-level elements first.
+            </summary>
+            <returns>
+            An enumerator of the elements.
+            </returns>
+        </member>
         <member name="T:Zebble.zebbleOxyPlot.PlotType">
             <summary>
             Specifies the coordinate system type.
@@ -5892,6 +5919,189 @@
             Resets the clipping rectangle.
             </summary>
         </member>
+        <member name="T:Zebble.zebbleOxyPlot.RenderContextBase">
+            <summary>
+            Provides an abstract base class for rendering contexts.
+            </summary>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.RenderContextBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zebble.zebbleOxyPlot.RenderContextBase" /> class.
+            </summary>
+        </member>
+        <member name="P:Zebble.zebbleOxyPlot.RenderContextBase.RendersToScreen">
+            <summary>
+            Gets or sets a value indicating whether the context renders to screen.
+            </summary>
+            <value><c>true</c> if the context renders to screen; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.RenderContextBase.DrawEllipse(Zebble.zebbleOxyPlot.OxyRect,Zebble.zebbleOxyPlot.OxyColor,Zebble.zebbleOxyPlot.OxyColor,System.Double)">
+            <summary>
+            Draws an ellipse.
+            </summary>
+            <param name="rect">The rectangle.</param>
+            <param name="fill">The fill color.</param>
+            <param name="stroke">The stroke color.</param>
+            <param name="thickness">The thickness.</param>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.RenderContextBase.DrawEllipses(System.Collections.Generic.IList{Zebble.zebbleOxyPlot.OxyRect},Zebble.zebbleOxyPlot.OxyColor,Zebble.zebbleOxyPlot.OxyColor,System.Double)">
+            <summary>
+            Draws the collection of ellipses, where all have the same stroke and fill.
+            This performs better than calling DrawEllipse multiple times.
+            </summary>
+            <param name="rectangles">The rectangles.</param>
+            <param name="fill">The fill color.</param>
+            <param name="stroke">The stroke color.</param>
+            <param name="thickness">The stroke thickness.</param>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.RenderContextBase.DrawLine(System.Collections.Generic.IList{Zebble.zebbleOxyPlot.ScreenPoint},Zebble.zebbleOxyPlot.OxyColor,System.Double,System.Double[],Zebble.zebbleOxyPlot.LineJoin,System.Boolean)">
+            <summary>
+            Draws a polyline.
+            </summary>
+            <param name="points">The points.</param>
+            <param name="stroke">The stroke color.</param>
+            <param name="thickness">The stroke thickness.</param>
+            <param name="dashArray">The dash array.</param>
+            <param name="lineJoin">The line join type.</param>
+            <param name="aliased">if set to <c>true</c> the shape will be aliased.</param>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.RenderContextBase.DrawLineSegments(System.Collections.Generic.IList{Zebble.zebbleOxyPlot.ScreenPoint},Zebble.zebbleOxyPlot.OxyColor,System.Double,System.Double[],Zebble.zebbleOxyPlot.LineJoin,System.Boolean)">
+            <summary>
+            Draws multiple line segments defined by points (0,1) (2,3) (4,5) etc.
+            This should have better performance than calling DrawLine for each segment.
+            </summary>
+            <param name="points">The points.</param>
+            <param name="stroke">The stroke color.</param>
+            <param name="thickness">The stroke thickness.</param>
+            <param name="dashArray">The dash array.</param>
+            <param name="lineJoin">The line join type.</param>
+            <param name="aliased">If set to <c>true</c> the shape will be aliased.</param>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.RenderContextBase.DrawPolygon(System.Collections.Generic.IList{Zebble.zebbleOxyPlot.ScreenPoint},Zebble.zebbleOxyPlot.OxyColor,Zebble.zebbleOxyPlot.OxyColor,System.Double,System.Double[],Zebble.zebbleOxyPlot.LineJoin,System.Boolean)">
+            <summary>
+            Draws a polygon. The polygon can have stroke and/or fill.
+            </summary>
+            <param name="points">The points.</param>
+            <param name="fill">The fill color.</param>
+            <param name="stroke">The stroke color.</param>
+            <param name="thickness">The stroke thickness.</param>
+            <param name="dashArray">The dash array.</param>
+            <param name="lineJoin">The line join type.</param>
+            <param name="aliased">If set to <c>true</c> the shape will be aliased.</param>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.RenderContextBase.DrawPolygons(System.Collections.Generic.IList{System.Collections.Generic.IList{Zebble.zebbleOxyPlot.ScreenPoint}},Zebble.zebbleOxyPlot.OxyColor,Zebble.zebbleOxyPlot.OxyColor,System.Double,System.Double[],Zebble.zebbleOxyPlot.LineJoin,System.Boolean)">
+            <summary>
+            Draws a collection of polygons, where all polygons have the same stroke and fill.
+            This performs better than calling DrawPolygon multiple times.
+            </summary>
+            <param name="polygons">The polygons.</param>
+            <param name="fill">The fill color.</param>
+            <param name="stroke">The stroke color.</param>
+            <param name="thickness">The stroke thickness.</param>
+            <param name="dashArray">The dash array.</param>
+            <param name="lineJoin">The line join type.</param>
+            <param name="aliased">if set to <c>true</c> the shape will be aliased.</param>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.RenderContextBase.DrawRectangle(Zebble.zebbleOxyPlot.OxyRect,Zebble.zebbleOxyPlot.OxyColor,Zebble.zebbleOxyPlot.OxyColor,System.Double)">
+            <summary>
+            Draws a rectangle.
+            </summary>
+            <param name="rect">The rectangle.</param>
+            <param name="fill">The fill color.</param>
+            <param name="stroke">The stroke color.</param>
+            <param name="thickness">The stroke thickness.</param>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.RenderContextBase.DrawRectangles(System.Collections.Generic.IList{Zebble.zebbleOxyPlot.OxyRect},Zebble.zebbleOxyPlot.OxyColor,Zebble.zebbleOxyPlot.OxyColor,System.Double)">
+            <summary>
+            Draws a collection of rectangles, where all have the same stroke and fill.
+            This performs better than calling DrawRectangle multiple times.
+            </summary>
+            <param name="rectangles">The rectangles.</param>
+            <param name="fill">The fill color.</param>
+            <param name="stroke">The stroke color.</param>
+            <param name="thickness">The stroke thickness.</param>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.RenderContextBase.DrawText(Zebble.zebbleOxyPlot.ScreenPoint,System.String,Zebble.zebbleOxyPlot.OxyColor,System.String,System.Double,System.Double,System.Double,Zebble.HorizontalAlignment,Zebble.VerticalAlignment,System.Nullable{Zebble.zebbleOxyPlot.OxySize})">
+            <summary>
+            Draws the text.
+            </summary>
+            <param name="p">The position of the text.</param>
+            <param name="text">The text.</param>
+            <param name="fill">The fill color.</param>
+            <param name="fontFamily">The font family.</param>
+            <param name="fontSize">Size of the font.</param>
+            <param name="fontWeight">The font weight.</param>
+            <param name="rotate">The rotation angle.</param>
+            <param name="halign">The horizontal alignment.</param>
+            <param name="valign">The vertical alignment.</param>
+            <param name="maxSize">The maximum size of the text.</param>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.RenderContextBase.MeasureText(System.String,System.String,System.Double,System.Double)">
+            <summary>
+            Measures the text.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="fontFamily">The font family.</param>
+            <param name="fontSize">Size of the font.</param>
+            <param name="fontWeight">The font weight.</param>
+            <returns>The text size.</returns>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.RenderContextBase.SetToolTip(System.String)">
+            <summary>
+            Sets the tool tip for the following items.
+            </summary>
+            <param name="text">The text in the tooltip.</param>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.RenderContextBase.CleanUp">
+            <summary>
+            Cleans up resources not in use.
+            </summary>
+            <remarks>This method is called at the end of each rendering.</remarks>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.RenderContextBase.DrawImage(Zebble.zebbleOxyPlot.OxyImage,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Boolean)">
+            <summary>
+            Draws the specified portion of the specified <see cref="T:Zebble.zebbleOxyPlot.OxyImage" /> at the specified location and with the specified size.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="srcX">The x-coordinate of the upper-left corner of the portion of the source image to draw.</param>
+            <param name="srcY">The y-coordinate of the upper-left corner of the portion of the source image to draw.</param>
+            <param name="srcWidth">Width of the portion of the source image to draw.</param>
+            <param name="srcHeight">Height of the portion of the source image to draw.</param>
+            <param name="destX">The x-coordinate of the upper-left corner of drawn image.</param>
+            <param name="destY">The y-coordinate of the upper-left corner of drawn image.</param>
+            <param name="destWidth">The width of the drawn image.</param>
+            <param name="destHeight">The height of the drawn image.</param>
+            <param name="opacity">The opacity.</param>
+            <param name="interpolate">Interpolate if set to <c>true</c>.</param>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.RenderContextBase.SetClip(Zebble.zebbleOxyPlot.OxyRect)">
+            <summary>
+            Sets the clip rectangle.
+            </summary>
+            <param name="rect">The clip rectangle.</param>
+            <returns>True if the clip rectangle was set.</returns>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.RenderContextBase.ResetClip">
+            <summary>
+            Resets the clip rectangle.
+            </summary>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.RenderContextBase.CreateEllipse(Zebble.zebbleOxyPlot.OxyRect,System.Int32)">
+            <summary>
+            Creates an ellipse polygon.
+            </summary>
+            <param name="rect">The bounding rectangle.</param>
+            <param name="n">The number of points.</param>
+            <returns>The points defining the ellipse.</returns>
+            <remarks>Note that this is very slow, not optimized in any way.</remarks>
+        </member>
+        <member name="M:Zebble.zebbleOxyPlot.RenderContextBase.CreateRectangle(Zebble.zebbleOxyPlot.OxyRect)">
+            <summary>
+            Creates a rectangle polygon.
+            </summary>
+            <param name="rect">The rectangle.</param>
+            <returns>The points defining the rectangle.</returns>
+        </member>
         <member name="T:Zebble.zebbleOxyPlot.ScreenPoint">
             <summary>
             Represents a point defined in screen space.
@@ -6256,26 +6466,6 @@
             <param name="items">A sequence of items.</param>
             <returns>A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.</returns>
         </member>
-        <member name="T:Zebble.AnnotationLayer">
-            <summary>
-            Specifies the layer for an <see cref="!:Annotation" />.
-            </summary>
-        </member>
-        <member name="F:Zebble.AnnotationLayer.BelowAxes">
-            <summary>
-            Render the annotation below the gridlines of the axes.
-            </summary>
-        </member>
-        <member name="F:Zebble.AnnotationLayer.BelowSeries">
-            <summary>
-            Render the annotation below the series.
-            </summary>
-        </member>
-        <member name="F:Zebble.AnnotationLayer.AboveSeries">
-            <summary>
-            Render the annotation above the series.
-            </summary>
-        </member>
         <member name="T:Zebble.CodeGeneratorStringExtensions">
             <summary>
             Provides extension methods for code generation.
@@ -6322,6 +6512,65 @@
             </summary>
             <param name="value">The instance.</param>
             <returns>C# code.</returns>
+        </member>
+        <member name="T:Zebble.IView">
+            <summary>
+            Specifies common functionality for the views.
+            </summary>
+        </member>
+        <member name="P:Zebble.IView.ActualModel">
+            <summary>
+            Gets the actual model in the view.
+            </summary>
+            <value>
+            The actual <see cref="T:Zebble.zebbleOxyPlot.Model" />.
+            </value>
+        </member>
+        <member name="P:Zebble.IView.ClientArea">
+            <summary>
+            Gets the coordinates of the client area of the view.
+            </summary>
+            <value>
+            The client area rectangle.
+            </value>
+        </member>
+        <member name="M:Zebble.IView.HideZoomRectangle">
+            <summary>
+            Hides the zoom rectangle.
+            </summary>
+        </member>
+        <member name="M:Zebble.IView.ShowZoomRectangle(Zebble.zebbleOxyPlot.OxyRect)">
+            <summary>
+            Shows the zoom rectangle.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+        </member>
+        <member name="T:Zebble.IPlotView">
+            <summary>
+            Specifies functionality for the plot views.
+            </summary>
+        </member>
+        <member name="P:Zebble.IPlotView.ActualModel">
+            <summary>
+            Gets the actual <see cref="T:Zebble.zebbleOxyPlot.PlotModel" /> of the control.
+            </summary>
+        </member>
+        <member name="M:Zebble.IPlotView.HideTracker">
+            <summary>
+            Hides the tracker.
+            </summary>
+        </member>
+        <member name="M:Zebble.IPlotView.InvalidatePlot(System.Boolean)">
+            <summary>
+            Invalidates the plot (not blocking the UI thread)
+            </summary>
+            <param name="updateData">if set to <c>true</c>, all data bindings will be updated.</param>
+        </member>
+        <member name="M:Zebble.IPlotView.SetClipboardText(System.String)">
+            <summary>
+            Stores text on the clipboard.
+            </summary>
+            <param name="text">The text.</param>
         </member>
         <member name="T:Zebble.LineStyleHelper">
             <summary>

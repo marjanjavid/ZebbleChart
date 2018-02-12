@@ -34,6 +34,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\ElementCollection{T}.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\HitTestArguments.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\HitTestResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\IView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\Model.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\SelectableElement.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\Selection.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)PlotController\EventArgs\OxyTouchEventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PlotModel\PlotElement.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PlotModel\PlotModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlotView\IPlotView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rendering\FontWeights.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rendering\LineJoin.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rendering\LineStyle.cs" />
@@ -75,6 +77,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Rendering\OxyThickness.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rendering\RenderContext\IRenderContext.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rendering\RenderContext\MathRenderingExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rendering\RenderContext\RenderContextBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rendering\RenderContext\RenderingExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rendering\ScreenPoint.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Rendering\ScreenVector.cs" />
@@ -88,8 +91,5 @@
     <None Include="$(MSBuildThisFileDirectory)MOVE-CONTENT-TO-ROOT\.gitignore" />
     <None Include="$(MSBuildThisFileDirectory)NuGet\NuGet.nuspec" />
     <None Include="$(MSBuildThisFileDirectory)NuGet\CreatePackage.bat" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)PlotView\" />
   </ItemGroup>
 </Project>

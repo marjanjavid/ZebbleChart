@@ -6,11 +6,11 @@ namespace Zebble
     using System.Threading.Tasks;
     using AndroidOS;
     using Android.Views;
-    using OxyPlot;
     using OxyPlot.Axes;
     using OxyPlot.Series;
-    using OxyPlot.Xamarin.Android;
     using Android;
+    using OxyPlot;
+    using OxyPlot.Xamarin.Android;
 
     [EditorBrowsable(EditorBrowsableState.Never)]
     public class zebbleOxyPlotRenderer : INativeRenderer
@@ -66,10 +66,14 @@ namespace Zebble
                 throw;
             }
         }
+
         private PlotModel CreatePlotModel()
         {
             var plotModel = new PlotModel { Title = View.plotModel.Title };
 
+            //TODO:Mohseni we should replace these 2 lines with the view amount 
+            //how should i use the user amounts?if i want to use switch case there would be lots of properties
+            
             plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom });
             plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Maximum = 10, Minimum = 0 });
 
