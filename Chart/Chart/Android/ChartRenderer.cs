@@ -22,14 +22,14 @@ namespace Zebble
             View = (Chart)renderer.View;
             Result = new PlotView(Renderer.Context)
             {
-                Model = View.plotModel,
+                Model = View.oxyplotModel,
             };
 
             return Result;
         }
 
 
-
+        
         public void Dispose()
         {
             throw new NotImplementedException();

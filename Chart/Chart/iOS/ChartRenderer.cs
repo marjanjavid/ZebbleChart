@@ -17,7 +17,7 @@ namespace Zebble
             View = (Chart)renderer.View;
             Result = new PlotView()
             {
-                Model = View.plotModel,
+                Model = View.oxyplotModel,
             };
 
             return Result;

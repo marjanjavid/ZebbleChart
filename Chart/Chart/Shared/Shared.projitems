@@ -9,11 +9,19 @@
     <Import_RootNamespace>Zebble.Plugin</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Chart.cs" />    
+    <Compile Include="$(MSBuildThisFileDirectory)Chart.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Foundation\ColumnItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Foundation\DataPoint.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Foundation\PieSlice.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlotModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Series\IPlotType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Series\Area.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Series\Line.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Series\Pie.cs" />
     <None Include="$(MSBuildThisFileDirectory)Icon.png" />
     <None Include="$(MSBuildThisFileDirectory)MOVE-CONTENT-TO-ROOT\.gitignore" />
     <None Include="$(MSBuildThisFileDirectory)MOVE-CONTENT-TO-ROOT\README.md" />
     <None Include="$(MSBuildThisFileDirectory)NuGet\NuGet.nuspec" />
     <None Include="$(MSBuildThisFileDirectory)NuGet\CreatePackage.bat" />
-  </ItemGroup>  
+  </ItemGroup>
 </Project>

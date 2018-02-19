@@ -4,5 +4,85 @@
         <name>Zebble.Plugin.Chart.Android</name>
     </assembly>
     <members>
+        <member name="T:Zebble.Chart.ColumnItem">
+            <summary>
+            Represents an item used in the ColumnSeries.
+            </summary>
+        </member>
+        <member name="P:Zebble.Chart.ColumnItem.Value">
+            <summary>
+            Gets or sets the value of the item.
+            </summary>
+        </member>
+        <member name="P:Zebble.Chart.ColumnItem.CategoryIndex">
+            <summary>
+            Gets or sets the index of the category.
+            </summary>
+            <value>The index of the category.</value>
+        </member>
+        <member name="M:Zebble.Chart.ColumnItem.#ctor(System.Double,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zebble.Chart.ColumnItem" /> class.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="categoryIndex">Index of the category.</param>
+        </member>
+        <member name="T:Zebble.Chart.DataPoint">
+            <summary>
+            Represents a point in the data space.
+            </summary>
+            <remarks><see cref="T:Zebble.Chart.DataPoint" />s are transformed to <see cref="!:ScreenPoint" />s.</remarks>
+        </member>
+        <member name="F:Zebble.Chart.DataPoint.Undefined">
+            <summary>
+            The undefined.
+            </summary>
+        </member>
+        <member name="F:Zebble.Chart.DataPoint.xx">
+            <summary>
+            The x-coordinate.
+            </summary>
+        </member>
+        <member name="F:Zebble.Chart.DataPoint.yy">
+            <summary>
+            The y-coordinate.
+            </summary>
+        </member>
+        <member name="M:Zebble.Chart.DataPoint.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zebble.Chart.DataPoint" /> struct.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+        </member>
+        <member name="P:Zebble.Chart.DataPoint.X">
+            <summary>
+            Gets the X-coordinate of the point.
+            </summary>
+            <value>The X-coordinate.</value>
+        </member>
+        <member name="P:Zebble.Chart.DataPoint.Y">
+            <summary>
+            Gets the Y-coordinate of the point.
+            </summary>
+            <value>The Y-coordinate.</value>
+        </member>
+        <member name="M:Zebble.Chart.PieSlice.#ctor(System.String,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zebble.Chart.PieSlice" /> class.
+            </summary>
+            <param name="label">The label.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="P:Zebble.Chart.PieSlice.Label">
+            <summary>
+            Gets the label.
+            </summary>
+        </member>
+        <member name="P:Zebble.Chart.PieSlice.Value">
+            <summary>
+            Gets the value.
+            </summary>
+        </member>
     </members>
 </doc>
