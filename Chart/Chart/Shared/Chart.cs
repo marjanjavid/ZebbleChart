@@ -12,7 +12,7 @@
 
     public partial class Chart : View, IRenderedBy<ChartRenderer>
     {
-        public PlotModel plotModel = new PlotModel();
+        public PlotModel plotModel { get; set; }
         public OxyPlot.PlotModel oxyplotModel { get; internal set; }
         //bool showXAxis = true, showYAxix = true, isZoomable = true, isMovable = true;
         IPlotType chart;
