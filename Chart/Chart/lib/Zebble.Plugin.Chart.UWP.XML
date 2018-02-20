@@ -89,5 +89,10 @@
             Represents a series for clustered or stacked bar charts.
             </summary>
         </member>
+        <member name="T:Zebble.Chart.Column">
+            <summary>
+            Represents a series for clustered or stacked Column charts.
+            </summary>
+        </member>
     </members>
 </doc>

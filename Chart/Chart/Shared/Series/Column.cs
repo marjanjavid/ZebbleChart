@@ -7,15 +7,15 @@ namespace Zebble
     public partial class Chart
     {
         /// <summary>
-        /// Represents a series for clustered or stacked bar charts.
+        /// Represents a series for clustered or stacked Column charts.
         /// </summary>
-        public class Bar : IPlotType
+        public class Column : IPlotType
         {
-            public Bar()
+            public Column()
             {
 
             }
-            public Bar(List<Item> data)
+            public Column(List<Item> data)
             {
                 this.Data = data;
             }

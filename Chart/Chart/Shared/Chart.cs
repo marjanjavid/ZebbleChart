@@ -92,7 +92,7 @@
                 }
                 this.oxyplotModel.Series.Add(pieSeries);
             }
-            else if(plotModel.Chart is Bar)
+            else if (plotModel.Chart is Bar)
             {
                 var barSeries = new BarSeries();
                 foreach (var item in ((Bar)plotModel.Chart).Data)
@@ -114,95 +114,36 @@
         }
                 });
             }
-            //switch (chartType)
-            //{
-            //   
-            //    case PlotType.Bar:
 
-            //        break;
-            //    case PlotType.BoxPlot:
-            //        break;
-            //    case PlotType.CandleStick:
-            //        break;
-            //    case PlotType.Column:
-            //        var columnSeries = new ColumnSeries();
-            //        columnSeries.Items.Add(new Zebble.ColumnItem(100));
-            //        this.plotModel.Series.Add(columnSeries);
-            //        break;
-            //    case PlotType.Contour:
-            //        break;
-            //    case PlotType.ErrorColumn:
-            //        break;
-            //    case PlotType.Function:
-            //        break;
-            //    case PlotType.HeatMap:
-            //        break;
-            //    case PlotType.HighLow:
-            //        break;
-            //    case PlotType.IntervalBar:
-            //        break;
+            else if (plotModel.Chart is Column)
+            {
+                var barSeries = new ColumnSeries();
+                foreach (var item in ((Column)plotModel.Chart).Data)
+                {
+                    barSeries.Items.Add(item);
+                }
+                this.oxyplotModel.Series.Add(barSeries);
+                this.oxyplotModel.Axes.Add(new CategoryAxis
+                {
+                    Position = AxisPosition.Bottom,
+                    Key = "CakeAxis",
+                    ItemsSource = new[]
+                    {
+                        "A",
+                        "B",
+                        "C",
+                        "D",
+                        "E"
+                     }
+                });
+            }
 
-            //    case PlotType.Pie:
-            //        var ps = new PieSeries
-            //        {
-            //            StrokeThickness = 2.0,
-            //            InsideLabelPosition = 0.8,
-            //            AngleSpan = 360,
-            //            StartAngle = 0
-            //        };
-            //        ps.Slices.Add(new PieSlice("Africa", 1030) { IsExploded = true });
-            //        ps.Slices.Add(new PieSlice("Americas", 929) { IsExploded = true });
-            //        ps.Slices.Add(new PieSlice("Asia", 4157));
-            //        ps.Slices.Add(new PieSlice("Europe", 739) { IsExploded = true });
-            //        ps.Slices.Add(new PieSlice("Oceania", 35) { IsExploded = true });
-
-            //        this.plotModel.Series.Add(ps);
-            //        break;
-            //    case PlotType.RectangleBar:
-            //        break;
-            //    case PlotType.Scatter:
-            //        break;
-            //    case PlotType.StairStep:
-            //        break;
-            //    case PlotType.Stem:
-            //        break;
-            //    case PlotType.TornadoBar:
-            //        break;
-            //    case PlotType.TwoColorArea:
-            //        break;
-            //    case PlotType.TwoColorLine:
-            //        break;
-            //    default:
-            //        break;
-            //}
 
         }
         public override void Dispose()
         {
             base.Dispose();
         }
-        //public enum PlotType
-        //{
-        //    Area,
-        //    Bar,
-        //    BoxPlot,
-        //    CandleStick,
-        //    Column,
-        //    Contour,
-        //    ErrorColumn,
-        //    Function,
-        //    HeatMap,
-        //    HighLow,
-        //    IntervalBar,
-        //    Line,
-        //    Pie,
-        //    RectangleBar,
-        //    Scatter,
-        //    StairStep,
-        //    Stem,
-        //    TornadoBar,
-        //    TwoColorArea,
-        //    TwoColorLine
-        //}
+
     }
 }
