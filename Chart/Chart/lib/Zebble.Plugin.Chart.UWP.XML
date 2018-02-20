@@ -4,25 +4,25 @@
         <name>Zebble.Plugin.Chart.UWP</name>
     </assembly>
     <members>
-        <member name="T:Zebble.Chart.ColumnItem">
+        <member name="T:Zebble.Chart.Item">
             <summary>
             Represents an item used in the ColumnSeries.
             </summary>
         </member>
-        <member name="P:Zebble.Chart.ColumnItem.Value">
+        <member name="P:Zebble.Chart.Item.Value">
             <summary>
             Gets or sets the value of the item.
             </summary>
         </member>
-        <member name="P:Zebble.Chart.ColumnItem.CategoryIndex">
+        <member name="P:Zebble.Chart.Item.CategoryIndex">
             <summary>
             Gets or sets the index of the category.
             </summary>
             <value>The index of the category.</value>
         </member>
-        <member name="M:Zebble.Chart.ColumnItem.#ctor(System.Double,System.Int32)">
+        <member name="M:Zebble.Chart.Item.#ctor(System.Double,System.Int32)">
             <summary>
-            Initializes a new instance of the <see cref="T:Zebble.Chart.ColumnItem" /> class.
+            Initializes a new instance of the <see cref="T:Zebble.Chart.Item" /> class.
             </summary>
             <param name="value">The value.</param>
             <param name="categoryIndex">Index of the category.</param>
@@ -82,6 +82,11 @@
         <member name="P:Zebble.Chart.PieSlice.Value">
             <summary>
             Gets the value.
+            </summary>
+        </member>
+        <member name="T:Zebble.Chart.Bar">
+            <summary>
+            Represents a series for clustered or stacked bar charts.
             </summary>
         </member>
     </members>

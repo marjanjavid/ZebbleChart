@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Compile Include="ChartLayout.cs" />
     <Compile Include="ChartRenderer.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -9,7 +9,7 @@ namespace Zebble
         /// <summary>
         /// Represents an item used in the ColumnSeries.
         /// </summary>
-        public class ColumnItem : IPlotType
+        public class Item : IPlotType
         {
             /// <summary>
             /// Gets or sets the value of the item.
@@ -22,18 +22,22 @@ namespace Zebble
             public int CategoryIndex { get; set; }
 
             /// <summary>
-            /// Initializes a new instance of the <see cref="ColumnItem" /> class.
+            /// Initializes a new instance of the <see cref="Item" /> class.
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="categoryIndex">Index of the category.</param>
-            public ColumnItem(double value, int categoryIndex = -1)
+            public Item(double value, int categoryIndex = -1)
             {
                 this.Value = value;
                 this.CategoryIndex = categoryIndex;
             }
-            public static implicit operator OxyPlot.Series.ColumnItem(ColumnItem columnItem)
+            public static implicit operator OxyPlot.Series.ColumnItem(Item columnItem)
             {
                 return new OxyPlot.Series.ColumnItem(columnItem.Value, columnItem.CategoryIndex);
+            }
+            public static implicit operator OxyPlot.Series.BarItem(Item columnItem)
+            {
+                return new OxyPlot.Series.BarItem(columnItem.Value, columnItem.CategoryIndex);
             }
         }
     }

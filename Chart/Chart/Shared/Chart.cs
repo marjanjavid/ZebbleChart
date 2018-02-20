@@ -92,6 +92,28 @@
                 }
                 this.oxyplotModel.Series.Add(pieSeries);
             }
+            else if(plotModel.Chart is Bar)
+            {
+                var barSeries = new BarSeries();
+                foreach (var item in ((Bar)plotModel.Chart).Data)
+                {
+                    barSeries.Items.Add(item);
+                }
+                this.oxyplotModel.Series.Add(barSeries);
+                this.oxyplotModel.Axes.Add(new CategoryAxis
+                {
+                    Position = AxisPosition.Left,
+                    Key = "CakeAxis",
+                    ItemsSource = new[]
+        {
+                "Apple cake",
+                "Baumkuchen",
+                "Bundt Cake",
+                "Chocolate cake",
+                "Carrot cake"
+        }
+                });
+            }
             //switch (chartType)
             //{
             //   
