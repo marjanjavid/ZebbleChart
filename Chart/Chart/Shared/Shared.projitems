@@ -18,6 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Series\Bar.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Box.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Column.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Series\Contour.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\IPlotType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Area.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Line.cs" />

@@ -139,16 +139,26 @@
             }
             else if (plotModel.Chart is Box )
             {
-                var boxPlotSeries = new BoxPlotSeries();
+                var boxSeries = new BoxPlotSeries();
                 foreach (var item in ((Box)plotModel.Chart).Data)
                 {
-                    boxPlotSeries.Items.Add(item);
+                    boxSeries.Items.Add(item);
                 }
-                this.oxyplotModel.Series.Add(boxPlotSeries);
+                this.oxyplotModel.Series.Add(boxSeries);
                 this.oxyplotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left });
                 this.oxyplotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, MinimumPadding = 0.1, MaximumPadding = 0.1 });
             }
+            else if (plotModel.Chart is Contour)
+            {
+                var contourSeries = new ContourSeries();
+                
+                contourSeries.Data = ((Contour)plotModel.Chart).Data;
+                contourSeries.ColumnCoordinates = ((Contour)plotModel.Chart).ColumnCoordinates;
+                contourSeries.RowCoordinates = ((Contour)plotModel.Chart).RowCoordinates;
 
+                this.oxyplotModel.Series.Add(contourSeries);
+                
+            }
         }
         public override void Dispose()
         {

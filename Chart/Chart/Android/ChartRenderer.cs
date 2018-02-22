@@ -20,6 +20,10 @@ namespace Zebble
         static int NextId;
         public async Task<Android.Views.View> Render(Renderer renderer)
         {
+            try
+            {
+
+            
             View = (Chart)renderer.View;
             //Container = new ChartLayout(Renderer.Context) { Id = FindFreeId() };
             //await View.WhenShown(() => { Thread.UI.Run(LoadChart); });
@@ -30,6 +34,12 @@ namespace Zebble
             };
 
             return Result;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
         int FindFreeId()
         {

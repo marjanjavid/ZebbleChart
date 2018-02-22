@@ -175,5 +175,23 @@
             Represents a series for clustered or stacked Column charts.
             </summary>
         </member>
+        <member name="P:Zebble.Chart.Contour.Data">
+            <summary>
+            Gets or sets the data.
+            </summary>
+            <value>The data.</value>
+        </member>
+        <member name="P:Zebble.Chart.Contour.ColumnCoordinates">
+            <summary>
+            Gets or sets the column coordinates.
+            </summary>
+            <value>The column coordinates.</value>
+        </member>
+        <member name="P:Zebble.Chart.Contour.RowCoordinates">
+            <summary>
+            Gets or sets the row coordinates.
+            </summary>
+            <value>The row coordinates.</value>
+        </member>
     </members>
 </doc>
