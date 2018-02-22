@@ -137,7 +137,17 @@
                      }
                 });
             }
-
+            else if (plotModel.Chart is Box )
+            {
+                var boxPlotSeries = new BoxPlotSeries();
+                foreach (var item in ((Box)plotModel.Chart).Data)
+                {
+                    boxPlotSeries.Items.Add(item);
+                }
+                this.oxyplotModel.Series.Add(boxPlotSeries);
+                this.oxyplotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left });
+                this.oxyplotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, MinimumPadding = 0.1, MaximumPadding = 0.1 });
+            }
 
         }
         public override void Dispose()

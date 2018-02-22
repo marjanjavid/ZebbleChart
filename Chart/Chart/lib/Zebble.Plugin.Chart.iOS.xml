@@ -4,6 +4,87 @@
         <name>Zebble.Plugin.Chart.iOS</name>
     </assembly>
     <members>
+        <member name="T:Zebble.Chart.BoxPlotItem">
+            <summary>
+            Represents an item in a <see cref="!:BoxPlotSeries" />.
+            </summary>
+        </member>
+        <member name="M:Zebble.Chart.BoxPlotItem.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zebble.Chart.BoxPlotItem" /> class.
+            </summary>
+            <param name="xx">The x.</param>
+            <param name="lowerWhisker">The lower whisker.</param>
+            <param name="boxBottom">The box bottom.</param>
+            <param name="median">The median.</param>
+            <param name="boxTop">The box top.</param>
+            <param name="upperWhisker">The upper whisker.</param>
+        </member>
+        <member name="P:Zebble.Chart.BoxPlotItem.BoxBottom">
+            <summary>
+            Gets or sets the box bottom value (usually the 25th percentile, Q1).
+            </summary>
+            <value>The lower quartile value.</value>
+        </member>
+        <member name="P:Zebble.Chart.BoxPlotItem.BoxTop">
+            <summary>
+            Gets or sets the box top value (usually the 75th percentile, Q3)).
+            </summary>
+            <value>The box top value.</value>
+        </member>
+        <member name="P:Zebble.Chart.BoxPlotItem.LowerWhisker">
+            <summary>
+            Gets or sets the lower whisker value.
+            </summary>
+            <value>The lower whisker value.</value>
+        </member>
+        <member name="P:Zebble.Chart.BoxPlotItem.Median">
+            <summary>
+            Gets or sets the median.
+            </summary>
+            <value>The median.</value>
+        </member>
+        <member name="P:Zebble.Chart.BoxPlotItem.Mean">
+            <summary>
+            Gets or sets the mean.
+            </summary>
+            <value>The mean.</value>
+        </member>
+        <member name="P:Zebble.Chart.BoxPlotItem.Outliers">
+            <summary>
+            Gets or sets the outliers.
+            </summary>
+            <value>The outliers.</value>
+        </member>
+        <member name="P:Zebble.Chart.BoxPlotItem.Tag">
+            <summary>
+            Gets or sets the tag.
+            </summary>
+            <value>The tag.</value>
+        </member>
+        <member name="P:Zebble.Chart.BoxPlotItem.UpperWhisker">
+            <summary>
+            Gets or sets the upper whisker value.
+            </summary>
+            <value>The upper whisker value.</value>
+        </member>
+        <member name="P:Zebble.Chart.BoxPlotItem.Values">
+            <summary>
+            Gets a list of all the values in the item.
+            </summary>
+        </member>
+        <member name="P:Zebble.Chart.BoxPlotItem.X">
+            <summary>
+            Gets or sets the X value.
+            </summary>
+            <value>The X value.</value>
+        </member>
+        <member name="M:Zebble.Chart.BoxPlotItem.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
         <member name="T:Zebble.Chart.Item">
             <summary>
             Represents an item used in the ColumnSeries.

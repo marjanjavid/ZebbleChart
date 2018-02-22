@@ -10,11 +10,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Chart.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Foundation\BoxPlotItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\DataPoint.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\PieSlice.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PlotModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Bar.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Series\Box.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Column.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\IPlotType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Area.cs" />
