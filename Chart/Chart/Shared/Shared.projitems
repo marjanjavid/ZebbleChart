@@ -14,6 +14,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\DataPoint.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\PieSlice.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Foundation\RectangleBarItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PlotModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Bar.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Box.cs" />
@@ -23,6 +24,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Series\Area.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Line.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Pie.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Series\RectangleBar.cs" />
     <None Include="$(MSBuildThisFileDirectory)Icon.png" />
     <None Include="$(MSBuildThisFileDirectory)MOVE-CONTENT-TO-ROOT\.gitignore" />
     <None Include="$(MSBuildThisFileDirectory)MOVE-CONTENT-TO-ROOT\README.md" />

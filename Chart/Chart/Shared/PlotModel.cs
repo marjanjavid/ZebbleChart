@@ -9,7 +9,11 @@ namespace Zebble
         {
             string title = "Zebble Chart";
             public string Title { get { return title; } set { if (title == value) return; title = value; } }
-            public IPlotType Chart
+            public PlotModel()
+            {
+                this.Chart = new List<IPlotType>();
+            }
+            public List<IPlotType> Chart
             {
                 get;set;
             }

@@ -165,6 +165,45 @@
             Gets the value.
             </summary>
         </member>
+        <member name="T:Zebble.Chart.RectangleBarItem">
+            <summary>
+            Represents a rectangle item in a RectangleBarSeries.
+            </summary>
+        </member>
+        <member name="M:Zebble.Chart.RectangleBarItem.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zebble.Chart.RectangleBarItem" /> class.
+            </summary>
+            <param name="x0">The x0.</param>
+            <param name="y0">The y0.</param>
+            <param name="x1">The x1.</param>
+            <param name="y1">The y1.</param>
+        </member>
+        <member name="P:Zebble.Chart.RectangleBarItem.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:Zebble.Chart.RectangleBarItem.X0">
+            <summary>
+            Gets or sets the x0 coordinate.
+            </summary>
+        </member>
+        <member name="P:Zebble.Chart.RectangleBarItem.X1">
+            <summary>
+            Gets or sets the x1 coordinate.
+            </summary>
+        </member>
+        <member name="P:Zebble.Chart.RectangleBarItem.Y0">
+            <summary>
+            Gets or sets the y0 coordinate.
+            </summary>
+        </member>
+        <member name="P:Zebble.Chart.RectangleBarItem.Y1">
+            <summary>
+            Gets or sets the y1 coordinate.
+            </summary>
+        </member>
         <member name="T:Zebble.Chart.Bar">
             <summary>
             Represents a series for clustered or stacked bar charts.
