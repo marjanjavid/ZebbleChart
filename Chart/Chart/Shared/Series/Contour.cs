@@ -6,7 +6,7 @@ namespace Zebble
 {
     public partial class Chart
     {
-        public class Contour:IPlotType
+        public class Contour:Series
         {
             
             public Contour(double[,] data)

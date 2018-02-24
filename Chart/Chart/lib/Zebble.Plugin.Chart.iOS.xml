@@ -85,6 +85,21 @@
             </summary>
             <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
         </member>
+        <member name="P:Zebble.Chart.Color.StringColor">
+            <summary>
+            Parse a string.
+            </summary>
+            <param name="value">The string in the format <c>"#FFFFFF00"</c> or <c>"255,200,180,50"</c>.</param>
+            <returns>The parsed color.</returns>
+            <exception cref="T:System.FormatException">Invalid format.</exception>
+        </member>
+        <member name="P:Zebble.Chart.Color.UintColor">
+            <summary>
+            Convert an <see cref="T:System.UInt32" /> to a <see cref="T:OxyPlot.OxyColor" />.
+            </summary>
+            <param name="color">The unsigned integer color value.</param>
+            <returns>The <see cref="T:OxyPlot.OxyColor" />.</returns>
+        </member>
         <member name="T:Zebble.Chart.Item">
             <summary>
             Represents an item used in the ColumnSeries.
@@ -231,6 +246,30 @@
             Gets or sets the row coordinates.
             </summary>
             <value>The row coordinates.</value>
+        </member>
+        <member name="P:Zebble.Chart.Line.Color">
+            <summary>
+            Gets or sets the color of the curve.
+            </summary>
+            <value>The color.</value>
+        </member>
+        <member name="P:Zebble.Chart.Series.Title">
+            <summary>
+            Gets or sets the title of the series. The default is <c>null</c>.
+            </summary>
+            <value>The title that is shown in the legend of the plot. The default value is <c>null</c>.</value>
+        </member>
+        <member name="P:Zebble.Chart.TwoColorLine.Color2">
+            <summary>
+            Gets or sets the color for the part of the line that is below the limit.
+            </summary>
+        </member>
+        <member name="P:Zebble.Chart.TwoColorLine.Limit">
+            <summary>
+            Gets or sets the limit.
+            </summary>
+            <remarks>The parts of the line that is below this limit will be rendered with Color2.
+            The parts of the line that is above the limit will be rendered with Color.</remarks>
         </member>
     </members>
 </doc>

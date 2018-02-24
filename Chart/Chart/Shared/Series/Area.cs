@@ -6,7 +6,7 @@ namespace Zebble
 {
     public partial class Chart
     {
-        public class Area : IPlotType
+        public class Area : Series
         {
              public List<DataPoint> Data
             {

@@ -11,6 +11,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Chart.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\BoxPlotItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Foundation\ChartColor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\DataPoint.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\PieSlice.cs" />
@@ -25,6 +26,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Series\Line.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Pie.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\RectangleBar.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Series\Series.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Series\TwoColorLine.cs" />
     <None Include="$(MSBuildThisFileDirectory)Icon.png" />
     <None Include="$(MSBuildThisFileDirectory)MOVE-CONTENT-TO-ROOT\.gitignore" />
     <None Include="$(MSBuildThisFileDirectory)MOVE-CONTENT-TO-ROOT\README.md" />

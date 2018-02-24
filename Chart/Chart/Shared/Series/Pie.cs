@@ -6,7 +6,7 @@ namespace Zebble
 {
     public partial class Chart
     {
-        public class Pie: IPlotType
+        public class Pie: Series
         {
             public List<PieSlice> Data
             {

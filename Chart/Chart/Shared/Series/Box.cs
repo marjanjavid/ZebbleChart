@@ -6,7 +6,7 @@ namespace Zebble
 {
     public partial class Chart
     {
-        public class Box:IPlotType
+        public class Box:Series
         {
             public Box()
             {

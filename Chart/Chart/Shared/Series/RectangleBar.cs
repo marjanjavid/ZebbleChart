@@ -6,7 +6,7 @@ namespace Zebble
 {
     public partial class Chart
     {
-        public class RectangleBar:IPlotType
+        public class RectangleBar: Series
         {
             public RectangleBar()
             {
@@ -17,7 +17,7 @@ namespace Zebble
                 this.Data = data;
                 this.Title = title;
             }
-            public string Title { get; set; }
+            
             public List<RectangleBarItem> Data { get; private set; }
         }
     }

@@ -9,7 +9,7 @@ namespace Zebble
         /// <summary>
         /// Represents a series for clustered or stacked Column charts.
         /// </summary>
-        public class Column : IPlotType
+        public class Column : Series
         {
             public Column()
             {

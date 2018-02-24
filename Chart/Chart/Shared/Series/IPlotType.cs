@@ -8,6 +8,7 @@ namespace Zebble
     {
         public interface IPlotType
         {
+            
         }
     }
 }

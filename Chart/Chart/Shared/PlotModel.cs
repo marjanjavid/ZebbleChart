@@ -11,9 +11,9 @@ namespace Zebble
             public string Title { get { return title; } set { if (title == value) return; title = value; } }
             public PlotModel()
             {
-                this.Chart = new List<IPlotType>();
+                this.Series = new List<Series>();
             }
-            public List<IPlotType> Chart
+            public List<Series> Series
             {
                 get;set;
             }

@@ -12,6 +12,7 @@
 
     public partial class Chart : View, IRenderedBy<ChartRenderer>
     {
+       
         public PlotModel plotModel { get; set; }
         public OxyPlot.PlotModel oxyplotModel { get; internal set; }
         //bool showXAxis = true, showYAxix = true, isZoomable = true, isMovable = true;
@@ -57,7 +58,7 @@
         {
             this.oxyplotModel = new OxyPlot.PlotModel();
             this.oxyplotModel.Title = plotModel.Title;
-            foreach (var chart in plotModel.Chart)
+            foreach (var chart in plotModel.Series)
             {
                 if (chart is Area)
                 {
@@ -67,6 +68,22 @@
                         areaSeries.Points.Add(point);
                     }
                     this.oxyplotModel.Series.Add(areaSeries);
+                }
+                else if (chart is TwoColorLine)
+                {
+                    var twoColorLineSeries = new TwoColorLineSeries
+                    {
+                        Color = Color.CastToOxyColor(((TwoColorLine)chart).Color),
+                        Color2 = Color.CastToOxyColor(((TwoColorLine)chart).Color2),
+                        Limit = ((TwoColorLine)chart).Limit
+                    };
+                    foreach (var item in ((TwoColorLine)chart).Data)
+                    {
+                        twoColorLineSeries.Points.Add(item);
+                    }
+                    this.oxyplotModel.Series.Add(twoColorLineSeries);
+                    this.oxyplotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Title = "Temperature", Unit = "°C", ExtraGridlines = new[] { 0.0 } });
+                    this.oxyplotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Title = "Date" });
                 }
                 else if (chart is Line)
                 {
@@ -107,13 +124,13 @@
                         Position = AxisPosition.Left,
                         Key = "CakeAxis",
                         ItemsSource = new[]
-            {
-                "Apple cake",
-                "Baumkuchen",
-                "Bundt Cake",
-                "Chocolate cake",
-                "Carrot cake"
-        }
+                        {
+                            "Apple cake",
+                            "Baumkuchen",
+                            "Bundt Cake",
+                            "Chocolate cake",
+                            "Carrot cake"
+                         }
                     });
                 }
                 else if (chart is Column)
@@ -151,25 +168,28 @@
                 }
                 else if (chart is Contour)
                 {
-                    var contourSeries = new ContourSeries();
-
-                    contourSeries.Data = ((Contour)chart).Data;
-                    contourSeries.ColumnCoordinates = ((Contour)chart).ColumnCoordinates;
-                    contourSeries.RowCoordinates = ((Contour)chart).RowCoordinates;
-
+                    var contourSeries = new ContourSeries
+                    {
+                        Data = ((Contour)chart).Data,
+                        ColumnCoordinates = ((Contour)chart).ColumnCoordinates,
+                        RowCoordinates = ((Contour)chart).RowCoordinates
+                    };
                     this.oxyplotModel.Series.Add(contourSeries);
 
                 }
-                else if(chart is RectangleBar)
+                else if (chart is RectangleBar)
                 {
-                    var rectangleBarSeries = new RectangleBarSeries();
-                    rectangleBarSeries.Title = ((RectangleBar)chart).Title;
+                    var rectangleBarSeries = new RectangleBarSeries
+                    {
+                        Title = ((RectangleBar)chart).Title
+                    };
                     foreach (var item in ((RectangleBar)chart).Data)
                     {
                         rectangleBarSeries.Items.Add(item);
                     }
                     this.oxyplotModel.Series.Add(rectangleBarSeries);
                 }
+                
             }
         }
         public override void Dispose()

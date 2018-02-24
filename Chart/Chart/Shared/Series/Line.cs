@@ -6,8 +6,13 @@ namespace Zebble
 {
     public partial class Chart
     {
-        public class Line:IPlotType
+        public class Line: Series
         {
+            /// <summary>
+            /// Gets or sets the color of the curve.
+            /// </summary>
+            /// <value>The color.</value>
+            public Zebble.Color Color { get; set; }
             public List<DataPoint> Data
             {
                 get; set;
