@@ -20,7 +20,15 @@ namespace Zebble
             /// </summary>
             /// <value>The index of the category.</value>
             public int CategoryIndex { get; set; }
-
+            /// <summary>
+            /// Gets or sets the color of the item.
+            /// </summary>
+            /// <remarks>If the color is not specified (default), the color of the series will be used.</remarks>
+            public Zebble.Color Color { get; set; }
+            public Item()
+            {
+                    
+            }
             /// <summary>
             /// Initializes a new instance of the <see cref="Item" /> class.
             /// </summary>

@@ -85,7 +85,7 @@
             </summary>
             <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
         </member>
-        <member name="P:Zebble.Chart.Color.StringColor">
+        <member name="P:Zebble.Chart.ChartColor.StringColor">
             <summary>
             Parse a string.
             </summary>
@@ -93,12 +93,35 @@
             <returns>The parsed color.</returns>
             <exception cref="T:System.FormatException">Invalid format.</exception>
         </member>
-        <member name="P:Zebble.Chart.Color.UintColor">
+        <member name="P:Zebble.Chart.ChartColor.UintColor">
             <summary>
             Convert an <see cref="T:System.UInt32" /> to a <see cref="T:OxyPlot.OxyColor" />.
             </summary>
             <param name="color">The unsigned integer color value.</param>
             <returns>The <see cref="T:OxyPlot.OxyColor" />.</returns>
+        </member>
+        <member name="T:Zebble.Chart.ErrorColumnItem">
+            <summary>
+            Represents an item used in the ErrorColumnSeries.
+            </summary>
+        </member>
+        <member name="M:Zebble.Chart.ErrorColumnItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zebble.Chart.ErrorColumnItem" /> class.
+            </summary>
+        </member>
+        <member name="M:Zebble.Chart.ErrorColumnItem.#ctor(System.Double,System.Double,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zebble.Chart.ErrorColumnItem" /> class.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="error">The error.</param>
+            <param name="categoryIndex">Index of the category.</param>
+        </member>
+        <member name="P:Zebble.Chart.ErrorColumnItem.Error">
+            <summary>
+            Gets or sets the error of the item.
+            </summary>
         </member>
         <member name="T:Zebble.Chart.Item">
             <summary>
@@ -115,6 +138,12 @@
             Gets or sets the index of the category.
             </summary>
             <value>The index of the category.</value>
+        </member>
+        <member name="P:Zebble.Chart.Item.Color">
+            <summary>
+            Gets or sets the color of the item.
+            </summary>
+            <remarks>If the color is not specified (default), the color of the series will be used.</remarks>
         </member>
         <member name="M:Zebble.Chart.Item.#ctor(System.Double,System.Int32)">
             <summary>

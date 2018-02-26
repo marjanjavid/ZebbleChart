@@ -12,6 +12,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Chart.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\BoxPlotItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\ChartColor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Foundation\ErrorColumnItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\DataPoint.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\PieSlice.cs" />
@@ -21,6 +22,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Series\Box.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Column.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Contour.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Series\ErrorColumn.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\IPlotType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Area.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Line.cs" />

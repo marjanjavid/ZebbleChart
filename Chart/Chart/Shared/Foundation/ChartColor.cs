@@ -7,7 +7,7 @@ namespace Zebble
 {
     public partial class Chart
     {
-        public class Color
+        public class ChartColor
         {
             /// <summary>
             /// Parse a string.

@@ -60,12 +60,12 @@
             this.oxyplotModel.Title = plotModel.Title;
             foreach (var chart in plotModel.Series)
             {
-                 if (chart is TwoColorArea)
+                 if (chart is TwoColorArea)//it should be placed before Area if clause
                 {
                     var twoColorAreaSeries = new TwoColorAreaSeries
                     {
-                        Color = Color.CastToOxyColor(((TwoColorArea)chart).Color),
-                        Color2 = Color.CastToOxyColor(((TwoColorArea)chart).Color2),
+                        Color = ChartColor.CastToOxyColor(((TwoColorArea)chart).Color),
+                        Color2 = ChartColor.CastToOxyColor(((TwoColorArea)chart).Color2),
                         Limit = ((TwoColorArea)chart).Limit
                     };
                     foreach (var item in ((TwoColorArea)chart).Data)
@@ -85,12 +85,12 @@
                     }
                     this.oxyplotModel.Series.Add(areaSeries);
                 }
-                else if (chart is TwoColorLine)
+                else if (chart is TwoColorLine)//it should be placed before line if clause
                 {
                     var twoColorLineSeries = new TwoColorLineSeries
                     {
-                        Color = Color.CastToOxyColor(((TwoColorLine)chart).Color),
-                        Color2 = Color.CastToOxyColor(((TwoColorLine)chart).Color2),
+                        Color = ChartColor.CastToOxyColor(((TwoColorLine)chart).Color),
+                        Color2 = ChartColor.CastToOxyColor(((TwoColorLine)chart).Color2),
                         Limit = ((TwoColorLine)chart).Limit
                     };
                     foreach (var item in ((TwoColorLine)chart).Data)
@@ -148,6 +148,24 @@
                             "Carrot cake"
                          }
                     });
+                }
+                else if(chart is ErrorColumn)
+                {
+                    var errorColumn = new ErrorColumnSeries();
+                    foreach (ErrorColumnItem item in ((ErrorColumn)chart).Data)
+                    {
+                        errorColumn.Items.Add((OxyPlot.Series.ErrorColumnItem)item);
+                    }
+                    this.oxyplotModel.Series.Add(errorColumn);
+                    var categoryAxis = new CategoryAxis { Position = AxisPosition.Bottom };
+                    categoryAxis.Labels.Add("Category A");
+                    categoryAxis.Labels.Add("Category B");
+                    categoryAxis.Labels.Add("Category C");
+                    categoryAxis.Labels.Add("Category D");
+
+                    var valueAxis = new LinearAxis { Position = AxisPosition.Left, MinimumPadding = 0, MaximumPadding = 0.06, AbsoluteMinimum = 0 };
+                    this.oxyplotModel.Axes.Add(categoryAxis);
+                    this.oxyplotModel.Axes.Add(valueAxis);
                 }
                 else if (chart is Column)
                 {
