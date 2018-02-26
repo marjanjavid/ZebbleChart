@@ -60,7 +60,23 @@
             this.oxyplotModel.Title = plotModel.Title;
             foreach (var chart in plotModel.Series)
             {
-                if (chart is Area)
+                 if (chart is TwoColorArea)
+                {
+                    var twoColorAreaSeries = new TwoColorAreaSeries
+                    {
+                        Color = Color.CastToOxyColor(((TwoColorArea)chart).Color),
+                        Color2 = Color.CastToOxyColor(((TwoColorArea)chart).Color2),
+                        Limit = ((TwoColorArea)chart).Limit
+                    };
+                    foreach (var item in ((TwoColorArea)chart).Data)
+                    {
+                        twoColorAreaSeries.Points.Add(item);
+                    }
+                    this.oxyplotModel.Series.Add(twoColorAreaSeries);
+                    this.oxyplotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Title = "Temperature", Unit = "°C", ExtraGridlines = new[] { 0.0 } });
+                    this.oxyplotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Title = "Date" });
+                }
+                else if (chart is Area)
                 {
                     var areaSeries = new AreaSeries();
                     foreach (var point in ((Area)chart).Data)

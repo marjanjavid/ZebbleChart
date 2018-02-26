@@ -247,6 +247,17 @@
             </summary>
             <value>The row coordinates.</value>
         </member>
+        <member name="P:Zebble.Chart.Area.Color">
+            <summary>
+            Gets or sets line color.
+            </summary>
+        </member>
+        <member name="P:Zebble.Chart.Area.Color2">
+            <summary>
+            Gets or sets the color of the line for the second data set.
+            </summary>
+            <value>The color.</value>
+        </member>
         <member name="P:Zebble.Chart.Line.Color">
             <summary>
             Gets or sets the color of the curve.
@@ -258,6 +269,11 @@
             Gets or sets the title of the series. The default is <c>null</c>.
             </summary>
             <value>The title that is shown in the legend of the plot. The default value is <c>null</c>.</value>
+        </member>
+        <member name="P:Zebble.Chart.TwoColorArea.Limit">
+            <summary>
+            Gets or sets a baseline for the series.
+            </summary>
         </member>
         <member name="P:Zebble.Chart.TwoColorLine.Color2">
             <summary>

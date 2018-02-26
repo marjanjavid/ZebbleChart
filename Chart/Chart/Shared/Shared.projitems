@@ -27,6 +27,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Series\Pie.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\RectangleBar.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Series.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Series\TwoColorArea.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\TwoColorLine.cs" />
     <None Include="$(MSBuildThisFileDirectory)Icon.png" />
     <None Include="$(MSBuildThisFileDirectory)MOVE-CONTENT-TO-ROOT\.gitignore" />
