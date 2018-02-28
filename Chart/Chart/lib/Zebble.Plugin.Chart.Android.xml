@@ -378,6 +378,59 @@
             </summary>
             <value>The color.</value>
         </member>
+        <member name="T:Zebble.Chart.Function">
+            <summary>
+            Represents a line series that generates its dataset from a function.
+            </summary>
+            <remarks>Define <code>f(x)</code> and make a plot on the range <code>[x0,x1]</code> or define <code>x(t)</code> and <code>y(t)</code> and make a plot on the range <code>[t0,t1]</code>.</remarks>
+        </member>
+        <member name="M:Zebble.Chart.Function.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref = "T:Zebble.Chart.Function" /> class.
+            </summary>
+        </member>
+        <member name="M:Zebble.Chart.Function.#ctor(System.Func{System.Double,System.Double},System.Double,System.Double,System.Double,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zebble.Chart.Function" /> class using a function <code>f(x)</code>.
+            </summary>
+            <param name="ff">The function <code>f(x)</code>.</param>
+            <param name="x0">The start x value.</param>
+            <param name="x1">The end x value.</param>
+            <param name="dx">The increment in x.</param>
+            <param name="title">The title (optional).</param>
+        </member>
+        <member name="M:Zebble.Chart.Function.#ctor(System.Func{System.Double,System.Double},System.Double,System.Double,System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zebble.Chart.Function" /> class using a function <code>f(x)</code>.
+            </summary>
+            <param name="ff">The function <code>f(x)</code>.</param>
+            <param name="x0">The start x value.</param>
+            <param name="x1">The end x value.</param>
+            <param name="nn">The number of points.</param>
+            <param name="title">The title (optional).</param>
+        </member>
+        <member name="M:Zebble.Chart.Function.#ctor(System.Func{System.Double,System.Double},System.Func{System.Double,System.Double},System.Double,System.Double,System.Double,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zebble.Chart.Function" /> class using functions <code>x(t)</code> and <code>y(t)</code>.
+            </summary>
+            <param name="fx">The function <code>x(t)</code>.</param>
+            <param name="fy">The function <code>y(t)</code>.</param>
+            <param name="t0">The start t parameter.</param>
+            <param name="t1">The end t parameter.</param>
+            <param name="dt">The increment in t.</param>
+            <param name="title">The title.</param>
+        </member>
+        <member name="M:Zebble.Chart.Function.#ctor(System.Func{System.Double,System.Double},System.Func{System.Double,System.Double},System.Double,System.Double,System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zebble.Chart.Function" /> class using functions <code>x(t)</code> and <code>y(t)</code>.
+            </summary>
+            <param name="fx">The function <code>x(t)</code>.</param>
+            <param name="fy">The function <code>y(t)</code>.</param>
+            <param name="t0">The start t parameter.</param>
+            <param name="t1">The end t parameter.</param>
+            <param name="nn">The number of points.</param>
+            <param name="title">The title.</param>
+        </member>
         <member name="P:Zebble.Chart.Line.Color">
             <summary>
             Gets or sets the color of the curve.

@@ -28,6 +28,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Series\Contour.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\ErrorColumn.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Area.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Series\Function.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Line.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Pie.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\RectangleBar.cs" />
