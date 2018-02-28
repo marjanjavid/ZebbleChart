@@ -195,6 +195,19 @@
                     }
                     this.oxyplotModel.Series.Add(candleStickSeries);
                 }
+                 else if(chart is HeatMap)
+                {
+                    var heatMapSeries = new HeatMapSeries() {
+                        Data = ((HeatMap)chart).Data,
+                        X0 = ((HeatMap)chart).X0,
+                        X1 = ((HeatMap)chart).X1,
+                        Y0 = ((HeatMap)chart).Y0,
+                        Y1= ((HeatMap)chart).Y1,
+                        Interpolate = ((HeatMap)chart).Interpolate,
+                        RenderMethod = ((HeatMap)chart).RenderMethod
+                    };
+                    this.oxyplotModel.Series.Add(heatMapSeries);
+                }
             }
             foreach(var axis in plotModel.Axes)
             {
