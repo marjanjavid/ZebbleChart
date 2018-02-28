@@ -208,6 +208,15 @@
                     };
                     this.oxyplotModel.Series.Add(heatMapSeries);
                 }
+                else if (chart is HighLow)
+                {
+                    var highLowSeries = new HighLowSeries();
+                    foreach (var item in ((HighLow)chart).Data)
+                    {
+                        highLowSeries.Items.Add(item);
+                    }
+                    this.oxyplotModel.Series.Add(highLowSeries);
+                }
             }
             foreach(var axis in plotModel.Axes)
             {

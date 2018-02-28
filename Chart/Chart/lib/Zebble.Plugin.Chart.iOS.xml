@@ -499,6 +499,12 @@
             </summary>
             <value>The render method.</value>
         </member>
+        <member name="P:Zebble.Chart.HighLow.Data">
+            <summary>
+            Gets the items of the series.
+            </summary>
+            <value>The items.</value>
+        </member>
         <member name="P:Zebble.Chart.Line.Color">
             <summary>
             Gets or sets the color of the curve.
