@@ -6,17 +6,17 @@ namespace Zebble
 {
     public partial class Chart
     {
-        public class Pie: Series
-        {           
-            public Pie()
+        public class CandleStick:Series
+        {
+            public CandleStick()
             {
-                this.Data = new List<PieSlice>();
+                this.Data = new List<HighLowItem>();
             }
-            public Pie(List<PieSlice> data)
+            public CandleStick(List<HighLowItem> data)
             {
                 this.Data = data;
             }
-            public List<PieSlice> Data
+            public List<HighLowItem> Data
             {
                 get; set;
             }

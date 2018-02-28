@@ -10,7 +10,7 @@ namespace Zebble
         {
             public Box()
             {
-
+                this.Data = new List<BoxPlotItem>();
             }
             public Box(List<BoxPlotItem> data)
             {

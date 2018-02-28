@@ -9,7 +9,7 @@ namespace Zebble
         /// <summary>
         /// Represents an item used in the ColumnSeries.
         /// </summary>
-        public class Item : IPlotType
+        public class Item 
         {
             /// <summary>
             /// Gets or sets the value of the item.

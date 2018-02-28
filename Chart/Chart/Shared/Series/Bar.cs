@@ -13,7 +13,7 @@ namespace Zebble
         {
             public Bar()
             {
-
+                this.Data = new List<Item>();
             }
             public Bar(List<Item> data)
             {

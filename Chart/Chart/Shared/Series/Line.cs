@@ -8,6 +8,14 @@ namespace Zebble
     {
         public class Line: Series
         {
+            public Line()
+            {
+                this.Data = new List<DataPoint>();
+            }
+            public Line(List<DataPoint> data)
+            {
+                this.Data = data;
+            }
             /// <summary>
             /// Gets or sets the color of the curve.
             /// </summary>
@@ -17,14 +25,7 @@ namespace Zebble
             {
                 get; set;
             }
-            public Line()
-            {
-                
-            }
-            public Line(List<DataPoint> data)
-            {
-                this.Data = data;
-            }
+            
         }
     }
 }

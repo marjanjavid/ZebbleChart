@@ -149,6 +149,71 @@
             Gets or sets the error of the item.
             </summary>
         </member>
+        <member name="T:Zebble.Chart.HighLowItem">
+            <summary>
+            Represents an item in a <see cref="!:HighLowSeries" />.
+            </summary>
+        </member>
+        <member name="F:Zebble.Chart.HighLowItem.Undefined">
+            <summary>
+            The undefined.
+            </summary>
+        </member>
+        <member name="M:Zebble.Chart.HighLowItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zebble.Chart.HighLowItem" /> class.
+            </summary>
+        </member>
+        <member name="M:Zebble.Chart.HighLowItem.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Zebble.Chart.HighLowItem"/> class.
+            </summary>
+            <param name="xx">
+            The xx value.
+            </param>
+            <param name="high">
+            The high value.
+            </param>
+            <param name="low">
+            The low value.
+            </param>
+            <param name="open">
+            The open value.
+            </param>
+            <param name="close">
+            The close value.
+            </param>
+        </member>
+        <member name="P:Zebble.Chart.HighLowItem.Close">
+            <summary>
+            Gets or sets the close value.
+            </summary>
+            <value>The close value.</value>
+        </member>
+        <member name="P:Zebble.Chart.HighLowItem.High">
+            <summary>
+            Gets or sets the high value.
+            </summary>
+            <value>The high value.</value>
+        </member>
+        <member name="P:Zebble.Chart.HighLowItem.Low">
+            <summary>
+            Gets or sets the low value.
+            </summary>
+            <value>The low value.</value>
+        </member>
+        <member name="P:Zebble.Chart.HighLowItem.Open">
+            <summary>
+            Gets or sets the open value.
+            </summary>
+            <value>The open value.</value>
+        </member>
+        <member name="P:Zebble.Chart.HighLowItem.X">
+            <summary>
+            Gets or sets the X value (time).
+            </summary>
+            <value>The X value.</value>
+        </member>
         <member name="T:Zebble.Chart.Item">
             <summary>
             Represents an item used in the ColumnSeries.

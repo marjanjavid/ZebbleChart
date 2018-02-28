@@ -13,7 +13,7 @@ namespace Zebble
         {
             public Column()
             {
-
+                this.Data = new List<Item>();
             }
             public Column(List<Item> data)
             {

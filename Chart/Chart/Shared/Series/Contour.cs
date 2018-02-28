@@ -8,15 +8,15 @@ namespace Zebble
     {
         public class Contour:Series
         {
-            
-            public Contour(double[,] data)
-            {
-                this.Data = data;
-            }
             public Contour()
             {
 
             }
+            public Contour(double[,] data)
+            {
+                this.Data = data;
+            }
+            
             /// <summary>
             /// Gets or sets the data.
             /// </summary>

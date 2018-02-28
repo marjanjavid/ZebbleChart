@@ -8,6 +8,14 @@ namespace Zebble
     {
         public class Area : Series
         {
+            public Area(List<DataPoint> data)
+            {
+                this.Data = data;
+            }
+            public Area()
+            {
+                this.Data = new List<DataPoint>();
+            }
             /// <summary>
             /// Gets or sets line color.
             /// </summary>
@@ -21,14 +29,7 @@ namespace Zebble
             {
                 get;set;
             }
-            public Area(List<DataPoint> data)
-            {
-                this.Data = data;
-            }
-            public Area()
-            {
-
-            }
+            
         }
     }
 }

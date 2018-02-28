@@ -9,7 +9,7 @@ namespace Zebble
         /// <summary>
         /// Represents an item in a <see cref="BoxPlotSeries" />.
         /// </summary>
-        public class BoxPlotItem:IPlotType
+        public class BoxPlotItem
         {
             /// <summary>
             /// Initializes a new instance of the <see cref="BoxPlotItem" /> class.

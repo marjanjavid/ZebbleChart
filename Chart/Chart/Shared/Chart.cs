@@ -185,7 +185,16 @@
                         rectangleBarSeries.Items.Add(item);
                     }
                     this.oxyplotModel.Series.Add(rectangleBarSeries);
-                }                
+                }
+                 else if(chart is CandleStick)
+                {
+                    var candleStickSeries = new CandleStickSeries();
+                    foreach(var item in ((CandleStick)chart).Data)
+                    {
+                        candleStickSeries.Items.Add(item);
+                    }
+                    this.oxyplotModel.Series.Add(candleStickSeries);
+                }
             }
             foreach(var axis in plotModel.Axes)
             {
