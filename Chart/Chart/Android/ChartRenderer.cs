@@ -24,7 +24,7 @@ namespace Zebble
             {
 
             
-            View = (Chart)renderer.View;
+             View = (Chart)renderer.View;
             //Container = new ChartLayout(Renderer.Context) { Id = FindFreeId() };
             //await View.WhenShown(() => { Thread.UI.Run(LoadChart); });
             //return Container;

@@ -73,8 +73,7 @@
                         twoColorAreaSeries.Points.Add(item);
                     }
                     this.oxyplotModel.Series.Add(twoColorAreaSeries);
-                    this.oxyplotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Title = "Temperature", Unit = "°C", ExtraGridlines = new[] { 0.0 } });
-                    this.oxyplotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Title = "Date" });
+                    
                 }
                 else if (chart is Area)
                 {
@@ -98,8 +97,7 @@
                         twoColorLineSeries.Points.Add(item);
                     }
                     this.oxyplotModel.Series.Add(twoColorLineSeries);
-                    this.oxyplotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Title = "Temperature", Unit = "°C", ExtraGridlines = new[] { 0.0 } });
-                    this.oxyplotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Title = "Date" });
+                    
                 }
                 else if (chart is Line)
                 {
@@ -115,8 +113,7 @@
                         lineSeries.Points.Add(point);
                     }
                     this.oxyplotModel.Series.Add(lineSeries);
-                    this.oxyplotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom });
-                    this.oxyplotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Maximum = 10, Minimum = 0 });
+                    
                 }
                 else if (chart is Pie)
                 {
@@ -135,19 +132,7 @@
                         barSeries.Items.Add(item);
                     }
                     this.oxyplotModel.Series.Add(barSeries);
-                    this.oxyplotModel.Axes.Add(new CategoryAxis
-                    {
-                        Position = AxisPosition.Left,
-                        Key = "CakeAxis",
-                        ItemsSource = new[]
-                        {
-                            "Apple cake",
-                            "Baumkuchen",
-                            "Bundt Cake",
-                            "Chocolate cake",
-                            "Carrot cake"
-                         }
-                    });
+                    
                 }
                 else if(chart is ErrorColumn)
                 {
@@ -157,15 +142,7 @@
                         errorColumn.Items.Add((OxyPlot.Series.ErrorColumnItem)item);
                     }
                     this.oxyplotModel.Series.Add(errorColumn);
-                    var categoryAxis = new CategoryAxis { Position = AxisPosition.Bottom };
-                    categoryAxis.Labels.Add("Category A");
-                    categoryAxis.Labels.Add("Category B");
-                    categoryAxis.Labels.Add("Category C");
-                    categoryAxis.Labels.Add("Category D");
-
-                    var valueAxis = new LinearAxis { Position = AxisPosition.Left, MinimumPadding = 0, MaximumPadding = 0.06, AbsoluteMinimum = 0 };
-                    this.oxyplotModel.Axes.Add(categoryAxis);
-                    this.oxyplotModel.Axes.Add(valueAxis);
+                    
                 }
                 else if (chart is Column)
                 {
@@ -175,19 +152,7 @@
                         barSeries.Items.Add(item);
                     }
                     this.oxyplotModel.Series.Add(barSeries);
-                    this.oxyplotModel.Axes.Add(new CategoryAxis
-                    {
-                        Position = AxisPosition.Bottom,
-                        Key = "CakeAxis",
-                        ItemsSource = new[]
-                        {
-                        "A",
-                        "B",
-                        "C",
-                        "D",
-                        "E"
-                     }
-                    });
+                    
                 }
                 else if (chart is Box)
                 {
@@ -197,8 +162,6 @@
                         boxSeries.Items.Add(item);
                     }
                     this.oxyplotModel.Series.Add(boxSeries);
-                    this.oxyplotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left });
-                    this.oxyplotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, MinimumPadding = 0.1, MaximumPadding = 0.1 });
                 }
                 else if (chart is Contour)
                 {
@@ -222,8 +185,12 @@
                         rectangleBarSeries.Items.Add(item);
                     }
                     this.oxyplotModel.Series.Add(rectangleBarSeries);
-                }
-                
+                }                
+            }
+            foreach(var axis in plotModel.Axes)
+            {
+                this.oxyplotModel.Axes.Add(axis);
+
             }
         }
         public override void Dispose()

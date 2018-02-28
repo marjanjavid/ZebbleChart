@@ -12,19 +12,14 @@ namespace Zebble
             public PlotModel()
             {
                 this.Series = new List<Series>();
+                this.Axes = new List<OxyPlot.Axes.Axis>();
             }
             public List<Series> Series
             {
-                get;set;
+                get; private set;
             }
-
-            //public static explicit operator OxyPlot.PlotModel(PlotModel model)
-            //{
-            //    return new OxyPlot.PlotModel()
-            //    {
-            //        Title = model.title,
-            //    };
-            //}
+            public List<OxyPlot.Axes.Axis> Axes { get;  set; }
+            
         }
     }
 }

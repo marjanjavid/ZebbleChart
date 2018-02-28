@@ -9,6 +9,8 @@
     <Import_RootNamespace>Zebble.Plugin</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Axes\Axis.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Axes\Linear.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Chart.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\BoxPlotItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\ChartColor.cs" />

@@ -4,6 +4,32 @@
         <name>Zebble.Plugin.Chart.UWP</name>
     </assembly>
     <members>
+        <member name="P:Zebble.Chart.Axis.Title">
+            <summary>
+            Gets or sets the title of the axis. The default value is <c>null</c>.
+            </summary>
+        </member>
+        <member name="P:Zebble.Chart.Axis.Position">
+            <summary>
+            Gets or sets the position of the axis. The default value is <see cref="F:OxyPlot.Axes.AxisPosition.Left"/>.
+            </summary>
+        </member>
+        <member name="P:Zebble.Chart.Axis.Unit">
+            <summary>
+            Gets or sets the unit of the axis. The default value is <c>null</c>.
+            </summary>
+            <remarks>The <see cref="!:TitleFormatString" /> is used to format the title including this unit.</remarks>
+        </member>
+        <member name="F:Zebble.Chart.Axis.position">
+            <summary>
+            The position of the axis.
+            </summary>
+        </member>
+        <member name="T:Zebble.Chart.Linear">
+            <summary>
+            Represents an axis with linear scale.
+            </summary>
+        </member>
         <member name="T:Zebble.Chart.BoxPlotItem">
             <summary>
             Represents an item in a <see cref="!:BoxPlotSeries" />.
