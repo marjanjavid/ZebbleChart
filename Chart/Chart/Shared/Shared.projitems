@@ -16,6 +16,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\ChartColor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\ErrorColumnItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\HighLowItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Foundation\IntervalBarItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\DataPoint.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\PieSlice.cs" />
@@ -31,6 +32,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Series\Function.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\HeatMap.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\HighLow.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Series\IntervalBar.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Line.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Pie.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\RectangleBar.cs" />

@@ -217,6 +217,15 @@
                     }
                     this.oxyplotModel.Series.Add(highLowSeries);
                 }
+                else if(chart is IntervalBar)
+                {
+                    var intervalBarSeries = new IntervalBarSeries();
+                    foreach(var item in ((IntervalBar)chart).Data)
+                    {
+                        intervalBarSeries.Items.Add(item);
+                    }
+                    this.oxyplotModel.Series.Add(intervalBarSeries);
+                }
             }
             foreach(var axis in plotModel.Axes)
             {
