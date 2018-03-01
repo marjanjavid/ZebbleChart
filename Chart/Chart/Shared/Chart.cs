@@ -226,6 +226,15 @@
                     }
                     this.oxyplotModel.Series.Add(intervalBarSeries);
                 }
+                 else if(chart is Scatter)
+                {
+                    var scatterSeries = new ScatterSeries();
+                    foreach(var item in ((Scatter)chart).Data)
+                    {
+                        scatterSeries.Points.Add(item);
+                    }
+                    this.oxyplotModel.Series.Add(scatterSeries);
+                }
             }
             foreach(var axis in plotModel.Axes)
             {

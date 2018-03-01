@@ -339,6 +339,36 @@
             Gets or sets the y1 coordinate.
             </summary>
         </member>
+        <member name="P:Zebble.Chart.ScatterPoint.X">
+            <summary>
+            Gets the X.
+            </summary>
+            <value>The X.</value>
+        </member>
+        <member name="P:Zebble.Chart.ScatterPoint.Y">
+            <summary>
+            Gets the Y.
+            </summary>
+            <value>The Y.</value>
+        </member>
+        <member name="P:Zebble.Chart.ScatterPoint.Size">
+            <summary>
+            Gets or sets the size.
+            </summary>
+            <value>The size.</value>
+        </member>
+        <member name="P:Zebble.Chart.ScatterPoint.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="P:Zebble.Chart.ScatterPoint.Tag">
+            <summary>
+            Gets or sets the tag.
+            </summary>
+            <value>The tag.</value>
+        </member>
         <member name="T:Zebble.Chart.Bar">
             <summary>
             Represents a series for clustered or stacked bar charts.
@@ -515,6 +545,11 @@
             Gets or sets the color of the curve.
             </summary>
             <value>The color.</value>
+        </member>
+        <member name="T:Zebble.Chart.Scatter">
+            <summary>
+            Provides a base class for scatter series.
+            </summary>
         </member>
         <member name="P:Zebble.Chart.Series.Title">
             <summary>

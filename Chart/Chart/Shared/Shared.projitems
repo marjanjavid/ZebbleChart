@@ -21,6 +21,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\DataPoint.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\PieSlice.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Foundation\RectangleBarItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Foundation\ScatterPoint.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PlotModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Bar.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Box.cs" />
@@ -36,6 +37,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Series\Line.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Pie.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\RectangleBar.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Series\Scatter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\Series.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\TwoColorArea.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Series\TwoColorLine.cs" />
